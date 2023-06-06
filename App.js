@@ -40,7 +40,7 @@ import ManageProposals from './src/manageJobs/ManageProposals';
 import HelpAndSupport from './src/helpAndSupport/HelpAndSupport';
 import ViewHistory from './src/manageJobs/ViewHistory';
 import BlogListing from './src/home/BlogListing';
-import BlogDetail from './src/home/BlogDetail'
+import BlogDetail from './src/home/BlogDetail';
 import Dispute from './src/disputes/Dispute';
 import store from './src/redux/Store';
 import {persistStore} from 'redux-persist';
@@ -150,7 +150,6 @@ HomeStack = () => {
         <Stack.Screen name="ImagePreview" component={ImagePreview} />
         <Stack.Screen name="BlogListing" component={BlogListing} />
         <Stack.Screen name="BlogDetail" component={BlogDetail} />
-
       </>
     </Stack.Navigator>
   );

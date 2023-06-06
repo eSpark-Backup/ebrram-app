@@ -1,4 +1,4 @@
- export const BaseUrl = 'https://Your Domain Name/wp-json/api/v1/';
+export const BaseUrl = 'https://ebrram.com/wp-json/api/v1/';
 
 export const primaryColor = '#FA4753';
 export const secondaryColor = '#0A0F26';
