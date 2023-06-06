@@ -168,7 +168,6 @@ const ServicesList = ({navigation, route}) => {
     )
       .then(response => response.json())
       .then(responseJson => {
-
         if (responseJson.type == 'success') {
           setSpinner(false);
           setServices(responseJson.services);
@@ -328,8 +327,8 @@ const ServicesList = ({navigation, route}) => {
   const openSheet = (item, index) => {
     setselectedInfo(index);
     RBSheetFilter.current.open();
-    handelSearchKeyword("")
-     setSearch("")
+    handelSearchKeyword('');
+    setSearch('');
   };
   const handelRangeValue = useCallback(
     (newLow, newHigh) => {
@@ -739,10 +738,10 @@ const ServicesList = ({navigation, route}) => {
                 size={20}
               />
               <TextInput
-                style={{marginLeft: 8, color:Constant.fontColor}}
+                style={{marginLeft: 8, color: Constant.fontColor}}
                 value={search}
                 onChangeText={text => handelSearchKeyword(text)}
-                placeholder={'Start seacrh here'}
+                placeholder={'Start search here'}
                 placeholderTextColor="#676767"
                 underlineColorAndroid="transparent"
               />

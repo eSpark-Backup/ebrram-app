@@ -28,7 +28,7 @@ const strings = new LocalizedStrings({
     globalUpload: 'to upload file',
     globalUploadPhoto: 'to upload photo',
     globalSelectFile: 'Select file',
-    globalStartSearch: 'Start seacrh here',
+    globalStartSearch: 'Start search here',
     globalFillCompleteData: 'Please fill complete data',
     globalYes: 'Yes',
     globalNo: 'No',
@@ -41,7 +41,8 @@ const strings = new LocalizedStrings({
     globalSubmit: 'Submit',
     globalClearFilter: 'Clear Filter',
     globalTry: 'Try Again',
-    globalInternetMessage: 'No internet connection found. Check your connection or try again.',
+    globalInternetMessage:
+      'No internet connection found. Check your connection or try again.',
 
     // For ForgotPassword.js
     forgotPasswordText: 'Forgot password',
@@ -307,8 +308,7 @@ const strings = new LocalizedStrings({
     identityVerificationReUpload: 'Cancel & Re-Upload',
 
     // For InvoiceList.js
-    invoiceListViewable:
-      'Invoice details are only viewable on web screens.',
+    invoiceListViewable: 'Invoice details are only viewable on web screens.',
     invoiceListOrder: 'Order ID:',
     invoiceListCreated: 'Created Date:',
     invoiceListAmount: 'Amount:',
@@ -365,7 +365,7 @@ const strings = new LocalizedStrings({
     jobListTabCategories: 'Categories',
     jobListTabLocation: 'Location',
     jobListTabLanguages: 'Languages',
-    jobListTabFreelancerType:"Freelancer type",
+    jobListTabFreelancerType: 'Freelancer type',
     jobListTabSkills: 'Skills',
 
     // For SendProposal.js
@@ -709,7 +709,7 @@ const strings = new LocalizedStrings({
 
     //For PostService.js
     postServiceTitle: 'Service title',
-    postServiceTitlePlaceholder: "Add service title",
+    postServiceTitlePlaceholder: 'Add service title',
     postServiceServiceDelivery: 'Service delivery',
     postServiceSelectServiceDelivery: 'Select service delivery',
     postServicePrice: 'Service price',
@@ -954,7 +954,7 @@ const strings = new LocalizedStrings({
     postJobEnglishLevel: 'English level',
     postJobSelectEnglishLevel: 'Select english level',
     postJobLocationType: 'Location type',
-    postJobProjectlocationType: "Project location type",
+    postJobProjectlocationType: 'Project location type',
     postJobExperience: 'Experience',
     postJobYearsExperiencePreferred: 'Years of experience preferred',
     postJobExpiredDate: 'Expired date',
@@ -968,7 +968,8 @@ const strings = new LocalizedStrings({
     postJobMaximumPrice: 'Maximum price',
     postJobMaximumPricePlaceholder: 'Add maximum price',
     postJobEstimatedHours: 'Estimated hours',
-    postJobRequireMilestonePayments: 'Will this project require milestone payments?',
+    postJobRequireMilestonePayments:
+      'Will this project require milestone payments?',
     postJobJobCategory: 'Job category',
     postJobSelectJobCategory: 'Select job category',
     postJobLanguages: 'Languages',
