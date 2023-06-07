@@ -55,7 +55,7 @@ import MessageDetail from './src/chat/MessageDetail';
 import ImagePreview from './src/chat/ImagePreview';
 import Translation from './src/constants/Translation';
 import NoInternet from './src/noInternet/NoInternet';
-import {requestUserPermission} from './src/utils';
+import {getFCMToken, subscribeNotification} from './src/utils';
 import messaging from '@react-native-firebase/messaging';
 
 LogBox.ignoreAllLogs();
@@ -159,19 +159,11 @@ HomeStack = () => {
 
 const App = () => {
   useEffect(() => {
-    getFCMToken();
+    (async () => {
+      const token = await getFCMToken();
+      subscribeNotification(token);
+    })();
   }, []);
-
-  const getFCMToken = async () => {
-    await requestUserPermission();
-    var token;
-    if (Platform.OS == 'ios') {
-      token = await messaging().getAPNSToken();
-    } else {
-      token = await messaging().getToken();
-    }
-    console.log(`${Platform.OS} token`, token);
-  };
 
   return (
     <Provider store={store}>
