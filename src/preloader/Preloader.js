@@ -40,7 +40,7 @@ const Preloader = ({navigation}) => {
   return (
     <View
       style={{
-        backgroundColor: '#FAB71D',
+        backgroundColor: '#1B8996',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
