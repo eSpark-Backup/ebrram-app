@@ -35,24 +35,14 @@ export const subscribeNotification = async device_token => {
       rest_api_key: Constant.restApiKey,
       device_uuid: device_uuid,
       device_token: device_token,
-      subscription: 'wowo',
+      subscription: 'sub1',
     })
     .then(async response => {
       console.log('response.data', response.data);
       if (!response.data.error) {
-        console.log('Subscribed', {
-          rest_api_key: Constant.restApiKey,
-          device_uuid: device_uuid,
-          device_token: device_token,
-          subscription: 'wowo',
-        });
+        console.log('Subscribed');
       } else {
-        console.log('Subscribe Fail', {
-          rest_api_key: Constant.restApiKey,
-          device_uuid: device_uuid,
-          device_token: device_token,
-          subscription: 'wowo',
-        });
+        console.log('Subscribe Fail');
       }
     })
     .catch(error => {
