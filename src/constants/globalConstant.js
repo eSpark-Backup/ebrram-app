@@ -1,4 +1,5 @@
 export const BaseUrl = 'https://ebrram.com/wp-json/api/v1/';
+export const BaseUrl_FCM = 'https://ebrram.com/wp-json/fcm/pn/';
 
 export const primaryColor = '#FAB71D';
 export const secondaryColor = '#3D3D3E';
@@ -36,3 +37,6 @@ export const secondryFontRegular = 'OpenSans-Regular';
 export const secondryFontMedium = 'OpenSans-Medium';
 export const secondryFontSemiBold = 'OpenSans-SemiBold';
 // Constant.darkGrayColor
+
+export const restApiKey =
+  '962s8p2635_3n6s0sq7q1p28q4.620555so54o46220qn81238q.2285n59550234sno06s9342nr220';
