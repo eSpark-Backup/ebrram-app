@@ -1,4 +1,4 @@
-package com.workreap.newarchitecture;
+package com.ebrram.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.workreap.BuildConfig;
-import com.workreap.newarchitecture.components.MainComponentsRegistry;
-import com.workreap.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.ebrram.BuildConfig;
+import com.ebrram.newarchitecture.components.MainComponentsRegistry;
+import com.ebrram.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
