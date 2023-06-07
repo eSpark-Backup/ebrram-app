@@ -33,7 +33,7 @@ const EmployerCard = ({item, noBorder, index, saved, removeItem}) => {
         Constant.BaseUrl + 'user/favorite',
         {
           user_id: userInfo.id,
-          favorite_id: item.employ_id,
+          favorite_id: item?.employ_id,
           type: '_following_employers',
         },
         {
@@ -43,7 +43,6 @@ const EmployerCard = ({item, noBorder, index, saved, removeItem}) => {
         },
       )
       .then(async response => {
-
         if (response.data.type == 'success') {
           item.favorit = 'yes';
           // setRefreshFlatList(!refreshFlatList);
@@ -92,53 +91,56 @@ const EmployerCard = ({item, noBorder, index, saved, removeItem}) => {
           }}
           style={styles.employerCardprofileImage}
           source={
-            item.profile_img != ''
-              ? {uri: item.profile_img}
+            item?.profile_img != ''
+              ? {uri: item?.profile_img}
               : require('../../assets/images/NoImage.png')
           }
         />
         <View style={{width: '80%', marginLeft: 15}}>
           <View style={styles.employerCardNameView}>
-            <Text style={styles.employerCardNameText}>{item.name}</Text>
+            <Text style={styles.employerCardNameText}>{item?.name}</Text>
             <FontAwesome name={'check-circle'} size={16} color={'#22C55E'} />
           </View>
-          {item._tag_line != '' && (
-            <Text style={styles.employerCardHeadingText}>{item._tag_line}</Text>
+          {item?._tag_line != '' && (
+            <Text style={styles.employerCardHeadingText}>
+              {item?._tag_line}
+            </Text>
           )}
         </View>
       </View>
       <View style={styles.employerCardFollowerListView}>
         <View style={styles.employerCardFollowerListSection}>
-          {item.followers.length != 0 &&
+          {item?.followers.length != 0 && (
             <FlatList
-            horizontal
-            style={{flexDirection: 'row'}}
-            showsVerticalScrollIndicator={false}
-            data={item.followers}
-            keyExtractor={(x, i) => i.toString()}
-            renderItem={({item, index}) => (
-              <View
-                style={[
-                  styles.employerCardFollowerListImagesView,
-                  {marginLeft: index == 0 ? 0 : -16},
-                ]}>
-                <Image
-                  style={styles.employerCardFollowerListImage}
-                  source={{uri: item.profile_image}}
-                />
-              </View>
-            )}
-          />}
+              horizontal
+              style={{flexDirection: 'row'}}
+              showsVerticalScrollIndicator={false}
+              data={item?.followers}
+              keyExtractor={(x, i) => i.toString()}
+              renderItem={({item, index}) => (
+                <View
+                  style={[
+                    styles.employerCardFollowerListImagesView,
+                    {marginLeft: index == 0 ? 0 : -16},
+                  ]}>
+                  <Image
+                    style={styles.employerCardFollowerListImage}
+                    source={{uri: item?.profile_image}}
+                  />
+                </View>
+              )}
+            />
+          )}
           <Text style={styles.employerCardFollowerText}>
-            {item.followers_count <= 1
-              ? item.followers_count + Translation.employerCardFollower
-              : item.followers_count + Translation.employerCardFollowers}{' '}
+            {item?.followers_count <= 1
+              ? item?.followers_count + Translation.employerCardFollower
+              : item?.followers_count + Translation.employerCardFollowers}{' '}
           </Text>
         </View>
         {saved ? (
           <TouchableOpacity
             onPress={() =>
-              removeItem(item.profile_id, '_following_employers', index)
+              removeItem(item?.profile_id, '_following_employers', index)
             }
             style={[
               styles.employerCardButtonFollowing,
@@ -150,9 +152,9 @@ const EmployerCard = ({item, noBorder, index, saved, removeItem}) => {
           </TouchableOpacity>
         ) : (
           <>
-            {(item.profile_id != userInfo.profile_id && token != null) && (
+            {item?.profile_id != userInfo.profile_id && token != null && (
               <>
-                {item.favorit == 'yes' ? (
+                {item?.favorit == 'yes' ? (
                   <TouchableOpacity
                     onPress={() => {
                       setShowAlert(true);
@@ -162,7 +164,7 @@ const EmployerCard = ({item, noBorder, index, saved, removeItem}) => {
                     }}
                     style={styles.employerCardButtonFollowing}>
                     <Text style={styles.employerCardFollowingText}>
-                     {Translation.employerCardFollowing}
+                      {Translation.employerCardFollowing}
                     </Text>
                   </TouchableOpacity>
                 ) : (
@@ -177,7 +179,7 @@ const EmployerCard = ({item, noBorder, index, saved, removeItem}) => {
                       />
                     ) : (
                       <Text style={styles.employerCardFollowText}>
-                       {Translation.employerCardFollow}
+                        {Translation.employerCardFollow}
                       </Text>
                     )}
                   </TouchableOpacity>

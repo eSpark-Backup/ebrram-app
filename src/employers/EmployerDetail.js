@@ -71,9 +71,9 @@ const EmployerDetail = ({route, navigation}) => {
   const onClickShare = () => {
     Share.share(
       {
-        message: "",
+        message: '',
         url: employerDetail.company_link,
-        title: "Share Employer",
+        title: 'Share Employer',
       },
       {
         // Android only:
@@ -85,10 +85,10 @@ const EmployerDetail = ({route, navigation}) => {
   };
   const openLoginAlert = () => {
     setShowAlert(true);
-      setType(Translation.customTabBarError);
-      setTitle(Translation.globalOops);
-      setDesc(Translation.customTabBarLoginFirst);
-  }
+    setType(Translation.customTabBarError);
+    setTitle(Translation.globalOops);
+    setDesc(Translation.customTabBarLoginFirst);
+  };
   const reportEmployer = async () => {
     setLoading(true);
     axios
@@ -108,7 +108,6 @@ const EmployerDetail = ({route, navigation}) => {
         },
       )
       .then(async response => {
-
         if (response.data.type == 'success') {
           RBSheetReportEmployer.current.close();
           // setRefreshFlatList(!refreshFlatList);
@@ -141,14 +140,13 @@ const EmployerDetail = ({route, navigation}) => {
         type={type}
         title={title}
         desc={desc}
-        login={token != null ? false:true}
-        loginAction={()=> {
+        login={token != null ? false : true}
+        loginAction={() => {
           setShowAlert(false);
           setTimeout(() => {
-            navigation.navigate('Login')
+            navigation.navigate('Login');
           }, 1000);
-        }
-        }
+        }}
       />
       <View
         style={[styles.headerMainView, {backgroundColor: Constant.whiteColor}]}>
@@ -168,7 +166,9 @@ const EmployerDetail = ({route, navigation}) => {
             onPress={() => {
               setReasonValue(null);
               setDetail('');
-              token!= null ?  RBSheetReportEmployer.current.open():openLoginAlert();
+              token != null
+                ? RBSheetReportEmployer.current.open()
+                : openLoginAlert();
             }}>
             <Feather
               style={{marginRight: 20}}
@@ -208,8 +208,8 @@ const EmployerDetail = ({route, navigation}) => {
               borderTopRightRadius: 10,
             }}
             source={
-              employerDetail.banner_img != ''
-                ? {uri: employerDetail.banner_img}
+              employerDetail?.banner_img != ''
+                ? {uri: employerDetail?.banner_img}
                 : require('../../assets/images/NoImage.png')
             }>
             <View style={styles.EmployerDetailTopImageOverly} />
@@ -217,10 +217,10 @@ const EmployerDetail = ({route, navigation}) => {
           <EmployerCard item={employerDetail} noBorder={true} />
         </View>
 
-        {employerDetail.employer_des != '' && (
+        {employerDetail?.employer_des != '' && (
           <View style={styles.EmployerDetailMainCardView}>
             <Text style={styles.EmployerDetailMainCardText}>
-              {Translation.employerDetailAbout} “{employerDetail.name}”
+              {Translation.employerDetailAbout} “{employerDetail?.name}”
             </Text>
             {/* <Text style={styles.EmployerDetailMainCardDesc}>
             {employerDetail.employer_des}
@@ -228,7 +228,7 @@ const EmployerDetail = ({route, navigation}) => {
             <HTML
               tagsStyles={tagsStyles}
               source={{
-                html: employerDetail.employer_des,
+                html: employerDetail?.employer_des,
               }}
             />
           </View>
@@ -239,13 +239,13 @@ const EmployerDetail = ({route, navigation}) => {
           </Text>
           <FlatList
             showsVerticalScrollIndicator={false}
-            data={employerDetail.jobs}
+            data={employerDetail?.jobs}
             keyExtractor={(x, i) => i.toString()}
             renderItem={({item, index}) => (
               <View style={styles.EmployerDetailProjectView}>
                 <View style={styles.rowView}>
                   <Text style={styles.EmployerDetailProjectUserName}>
-                    {employerDetail.name}
+                    {employerDetail?.name}
                   </Text>
                   <FontAwesome
                     name={'check-circle'}
@@ -254,25 +254,25 @@ const EmployerDetail = ({route, navigation}) => {
                   />
                 </View>
                 <Text style={styles.EmployerDetailProjectName}>
-                  {decode(item.project_title)}
+                  {decode(item?.project_title)}
                 </Text>
                 <Text style={styles.EmployerDetailProjectStartText}>
                   {Translation.employerDetailStarting}
                   <Text style={styles.EmployerDetailProjectPrice}>
-                    {decode(item.project_cost)}
+                    {decode(item?.project_cost)}
                   </Text>
                 </Text>
 
                 <HTML
                   tagsStyles={tagsStyles}
                   source={{
-                    html: item.project_content.substring(0, 200) + '...',
+                    html: item?.project_content?.substring(0, 200) + '...',
                   }}
                 />
 
                 <FlatList
                   showsVerticalScrollIndicator={false}
-                  data={item.skills}
+                  data={item?.skills}
                   style={{marginBottom: 10}}
                   columnWrapperStyle={{flexWrap: 'wrap'}}
                   numColumns={20}
@@ -281,7 +281,7 @@ const EmployerDetail = ({route, navigation}) => {
                     <View style={{flexDirection: 'row'}}>
                       <View style={styles.EmployerDetailProjectSkillView}>
                         <Text style={styles.EmployerDetailProjectSkillText}>
-                          {item.skill_name}
+                          {item?.skill_name}
                         </Text>
                       </View>
                     </View>
@@ -299,7 +299,7 @@ const EmployerDetail = ({route, navigation}) => {
                     </Text>
                   </View>
                   <Text style={styles.jobCardInfoListHeadingValue}>
-                    {item.project_level.level_title}
+                    {item?.project_level?.level_title}
                   </Text>
                 </View>
                 <View style={styles.jobCardInfoListMain}>
@@ -314,7 +314,7 @@ const EmployerDetail = ({route, navigation}) => {
                     </Text>
                   </View>
                   <Text style={styles.jobCardInfoListHeadingValue}>
-                    {item.project_duration}
+                    {item?.project_duration}
                   </Text>
                 </View>
                 <View style={styles.jobCardInfoListMain}>
@@ -329,7 +329,7 @@ const EmployerDetail = ({route, navigation}) => {
                     </Text>
                   </View>
                   <Text style={styles.jobCardInfoListHeadingValue}>
-                    {item.project_type}
+                    {item?.project_type}
                   </Text>
                 </View>
                 <View style={styles.jobCardInfoListMain}>
@@ -344,7 +344,7 @@ const EmployerDetail = ({route, navigation}) => {
                     </Text>
                   </View>
                   <Text style={styles.jobCardInfoListHeadingValue}>
-                    {item.deadline_date}
+                    {item?.deadline_date}
                   </Text>
                 </View>
                 {settings.user_meta.access_type.job_access == 'yes' && (

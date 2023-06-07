@@ -201,9 +201,11 @@ const customDrawer = ({navigation}) => {
     //     }
     //   });
     setShowAlert(true);
-    setType("error");
+    setType('error');
     setTitle(Translation.globalOops);
-    setDesc("You have enabled guppy so you have to buy WP Guppy Messenger - React Native Messenger APP for WP Guppy and setup with your app");
+    setDesc(
+      'You have enabled guppy so you have to buy WP Guppy Messenger - React Native Messenger APP for WP Guppy and setup with your app',
+    );
   };
   return (
     <SafeAreaView style={styles.globalContainer}>
@@ -306,7 +308,7 @@ const customDrawer = ({navigation}) => {
       ) : (
         <View
           style={{
-            backgroundColor: '#000000',
+            backgroundColor: Constant.backColor,
             alignItems: 'center',
             justifyContent: 'center',
             paddingHorizontal: 10,
@@ -323,7 +325,9 @@ const customDrawer = ({navigation}) => {
         </View>
       )}
 
-      <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor:Constant.whiteColor}}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{backgroundColor: Constant.whiteColor}}>
         {!isEmpty && (
           <>
             <TouchableOpacity
@@ -352,7 +356,11 @@ const customDrawer = ({navigation}) => {
                     : navigation.navigate('Inbox')
                 }
                 style={[styles.drawerItemParentStyle, styles.drawerAddonStyle]}>
-                <Feather name={'message-square'} size={18} color={Constant.iconColor} />
+                <Feather
+                  name={'message-square'}
+                  size={18}
+                  color={Constant.iconColor}
+                />
                 <Text style={styles.drawerItemTextStyle}>
                   {Translation.customDrawerInbox}
                 </Text>
@@ -370,7 +378,11 @@ const customDrawer = ({navigation}) => {
                 {justifyContent: 'space-between'},
               ]}>
               <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <Feather name={'monitor'} size={18} color={Constant.iconColor} />
+                <Feather
+                  name={'monitor'}
+                  size={18}
+                  color={Constant.iconColor}
+                />
                 <Text style={styles.drawerItemTextStyle}>
                   {Translation.customDrawerProfile}
                 </Text>
@@ -469,7 +481,11 @@ const customDrawer = ({navigation}) => {
               onPress={() => setopenTab(openTab == 'setting' ? '' : 'setting')}>
               <View style={styles.drawerDropdownItemParentStyle}>
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                  <Feather name={'settings'} size={18} color={Constant.iconColor} />
+                  <Feather
+                    name={'settings'}
+                    size={18}
+                    color={Constant.iconColor}
+                  />
                   <Text style={styles.drawerItemTextStyle}>Settings</Text>
                 </View>
                 <Feather
@@ -546,7 +562,11 @@ const customDrawer = ({navigation}) => {
                 ]}>
                 <View style={styles.drawerDropdownItemParentStyle}>
                   <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                    <Feather name={'edit'} size={18} color={Constant.iconColor} />
+                    <Feather
+                      name={'edit'}
+                      size={18}
+                      color={Constant.iconColor}
+                    />
                     <Text style={styles.drawerItemTextStyle}>
                       {Translation.customDrawerPortfolios}
                     </Text>
@@ -851,7 +871,11 @@ const customDrawer = ({navigation}) => {
                 ]}>
                 <View style={styles.drawerDropdownItemParentStyle}>
                   <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                    <Feather name={'edit'} size={18} color={Constant.iconColor} />
+                    <Feather
+                      name={'edit'}
+                      size={18}
+                      color={Constant.iconColor}
+                    />
                     <Text style={styles.drawerItemTextStyle}>
                       {Translation.customDrawerManageServices}
                     </Text>

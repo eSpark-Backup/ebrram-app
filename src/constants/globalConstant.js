@@ -2,6 +2,7 @@ export const BaseUrl = 'https://ebrram.com/wp-json/api/v1/';
 
 export const primaryColor = '#FAB71D';
 export const secondaryColor = '#3D3D3E';
+export const backColor = '#1B8996';
 
 //Light Mode
 export const darkGrayColor = '#f7f7f7';
