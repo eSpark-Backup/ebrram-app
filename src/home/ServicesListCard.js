@@ -5,11 +5,10 @@ import Feather from 'react-native-vector-icons/Feather';
 import * as Constant from '../constants/globalConstant';
 import styles from '../styles/Style';
 import FormButton from '../components/FormButton';
-import { decode } from "html-entities";
+import {decode} from 'html-entities';
 import Translation from '../constants/Translation';
 
 const ServicesListCard = props => {
-  
   return (
     <View style={[styles.serviceListCardParentStyle, {width: props.width}]}>
       <ImageBackground
@@ -18,7 +17,11 @@ const ServicesListCard = props => {
           borderTopLeftRadius: 10,
           borderTopRightRadius: 10,
         }}
-        source={props.item.images.length >= 1 ?   {uri : props.item.images[0].url} : require('../../assets/images/NoImage.png')}>
+        source={
+          props.item.images.length >= 1
+            ? {uri: props.item.images[0].url}
+            : require('../../assets/images/NoImage.png')
+        }>
         <View style={styles.serviceListCardImagebackgroundOverlyStyle} />
       </ImageBackground>
       <View style={styles.serviceListCardImageParentStyle}>
@@ -31,11 +34,11 @@ const ServicesListCard = props => {
         </View>
         {props.item.favorit == 'yes' ? (
           <AntDesign
-          style={{alignSelf: 'flex-end'}}
-          name={'heart'}
-          size={20}
-          color={'#FA4753'}
-        />
+            style={{alignSelf: 'flex-end'}}
+            name={'heart'}
+            size={20}
+            color={'#FAB71D'}
+          />
         ) : (
           <AntDesign
             style={{alignSelf: 'flex-end'}}
@@ -51,7 +54,9 @@ const ServicesListCard = props => {
         </Text>
         <AntDesign name={'checkcircle'} size={13} color={'#22C55E'} />
       </View>
-      <Text style={styles.serviceListCardTaglineStyle}>{decode(props.item.title)}</Text>
+      <Text style={styles.serviceListCardTaglineStyle}>
+        {decode(props.item.title)}
+      </Text>
       <View style={styles.serviceListCardReviewParentStyle}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <AntDesign name={'star'} size={13} color={'#FFD101'} />
@@ -61,8 +66,10 @@ const ServicesListCard = props => {
           <Text style={styles.serviceListCardRatingCountStyle}>
             (
             {props.item.reviews.length >= 2
-              ? props.item.reviews.length + Translation.serviceProviderCardReviews
-              : props.item.reviews.length + Translation.serviceProviderCardReview}
+              ? props.item.reviews.length +
+                Translation.serviceProviderCardReviews
+              : props.item.reviews.length +
+                Translation.serviceProviderCardReview}
             )
           </Text>
         </View>
@@ -84,7 +91,13 @@ const ServicesListCard = props => {
       {props.saved && (
         <View style={{paddingHorizontal: 10, marginBottom: 5}}>
           <FormButton
-           onPress={() => props.removeItem(props.item.service_id,"_saved_services",props.index)}
+            onPress={() =>
+              props.removeItem(
+                props.item.service_id,
+                '_saved_services',
+                props.index,
+              )
+            }
             buttonTitle={Translation.serviceProviderCardRemoveItems}
             backgroundColor={Constant.primaryColor}
             textColor={Constant.whiteColor}

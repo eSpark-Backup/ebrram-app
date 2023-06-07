@@ -203,7 +203,7 @@ export default StyleSheet.create({
   },
   input: {
     backgroundColor: Constant.whiteColor,
-    marginLeft:2,
+    marginLeft: 2,
     borderRadius: 6,
     paddingHorizontal: 10,
     fontSize: 17,
@@ -382,7 +382,7 @@ export default StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: 70 / 2,
-    backgroundColor: '#FA475350',
+    backgroundColor: '#fab71d50',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -407,7 +407,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'flex-end',
     marginHorizontal: 5,
-    marginTop:10,
+    marginTop: 10,
   },
   LoginSkipText: {
     fontSize: 16,
@@ -2132,7 +2132,7 @@ export default StyleSheet.create({
     borderRadius: 10,
     marginVertical: 10,
     marginRight: 10,
-    marginBottom:20,
+    marginBottom: 20,
   },
   profileSettingImageDetailView: {
     marginHorizontal: 10,
