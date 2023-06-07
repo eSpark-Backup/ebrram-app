@@ -365,7 +365,7 @@ export default StyleSheet.create({
     borderBottomLeftRadius: 6,
   },
   tabButtonTextStyle: {
-    fontSize: 13,
+    fontSize: 11,
     lineHeight: 22,
     letterSpacing: 0.5,
     color: Constant.lightGrayColor,
@@ -1823,7 +1823,7 @@ export default StyleSheet.create({
     height: 220,
   },
   drawerHeaderParentContentStyle: {
-    backgroundColor: '#00000095',
+    backgroundColor: Constant.backColor,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
