@@ -1,4 +1,4 @@
-import {View, Text, Button, LogBox} from 'react-native';
+import {View, Text, Button, LogBox, Platform} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
@@ -55,6 +55,8 @@ import MessageDetail from './src/chat/MessageDetail';
 import ImagePreview from './src/chat/ImagePreview';
 import Translation from './src/constants/Translation';
 import NoInternet from './src/noInternet/NoInternet';
+import {requestUserPermission} from './src/utils';
+import messaging from '@react-native-firebase/messaging';
 
 LogBox.ignoreAllLogs();
 const Tab = createBottomTabNavigator();
@@ -156,6 +158,21 @@ HomeStack = () => {
 };
 
 const App = () => {
+  useEffect(() => {
+    getFCMToken();
+  }, []);
+
+  const getFCMToken = async () => {
+    await requestUserPermission();
+    var token;
+    if (Platform.OS == 'ios') {
+      token = await messaging().getAPNSToken();
+    } else {
+      token = await messaging().getToken();
+    }
+    console.log(`${Platform.OS} token`, token);
+  };
+
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
