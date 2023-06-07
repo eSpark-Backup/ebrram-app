@@ -1,5 +1,5 @@
 import {View, Text, SafeAreaView, TouchableOpacity, Alert} from 'react-native';
-import React, {useState,useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import Feather from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient';
 import styles from '../styles/Style';
@@ -8,7 +8,6 @@ import {updateSearchView} from '../redux/GlobalStateSlice';
 import {useSelector, useDispatch} from 'react-redux';
 import Notification from '../components/Notification';
 import Translation from '../constants/Translation';
-
 
 const CustomTabBar = ({navigation}) => {
   const settings = useSelector(state => state.setting.settings);
@@ -21,8 +20,8 @@ const CustomTabBar = ({navigation}) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setSelectedTab("home")
-  }, [])
+    setSelectedTab('home');
+  }, []);
 
   function isObjectEmpty(object) {
     var isEmpty = true;
@@ -72,79 +71,108 @@ const CustomTabBar = ({navigation}) => {
             <Feather
               name={'home'}
               size={20}
-              color={selectedTab == 'home' ? Constant.iconColor : Constant.lightGrayColor}
+              color={
+                selectedTab == 'home'
+                  ? Constant.iconColor
+                  : Constant.lightGrayColor
+              }
             />
             <Text
               style={[
                 styles.tabButtonTextStyle,
-                {color: selectedTab == 'home' ? Constant.iconColor : Constant.lightGrayColor},
+                {
+                  color:
+                    selectedTab == 'home'
+                      ? Constant.iconColor
+                      : Constant.lightGrayColor,
+                },
               ]}>
               {Translation.customTabBarHome}
             </Text>
           </TouchableOpacity>
         </View>
 
-        {settings.user_meta.access_type.job_access == "yes" ?
+        {settings.user_meta.access_type.job_access == 'yes' ? (
           <View style={styles.tabButtonParentStyle}>
-          <View
-            style={[
-              styles.tabButtonSelectedBar,
-              {
-                backgroundColor:
-                  selectedTab == 'job' ? Constant.primaryColor : '#ffffff00',
-              },
-            ]}
-          />
-          <TouchableOpacity
-            onPress={() => {
-              setSelectedTab('job');
-              navigation.navigate('JobList', {backDisable: true});
-            }}
-            style={{alignItems: 'center', justifyContent: 'center'}}>
-            <Feather
-              name={'briefcase'}
-              size={20}
-              color={selectedTab == 'job' ? Constant.iconColor : Constant.lightGrayColor}
-            />
-            <Text
+            <View
               style={[
-                styles.tabButtonTextStyle,
-                {color: selectedTab == 'job' ? Constant.iconColor : Constant.lightGrayColor},
-              ]}>
-              {Translation.customTabBarJobs}
-            </Text>
-          </TouchableOpacity>
-        </View>:
-         <View style={styles.tabButtonParentStyle}>
-         <View
-           style={[
-             styles.tabButtonSelectedBar,
-             {
-               backgroundColor:
-                 selectedTab == 'job' ? Constant.primaryColor : '#ffffff00',
-             },
-           ]}
-         />
-         <TouchableOpacity
-           onPress={() => {
-             setSelectedTab('job');
-             navigation.navigate('ServiceList', {backDisable: true});
-           }}
-           style={{alignItems: 'center', justifyContent: 'center'}}>
-           <Feather
-             name={'briefcase'}
-             size={20}
-             color={selectedTab == 'job' ? Constant.iconColor : Constant.lightGrayColor}
-           />
-           <Text
-             style={[
-               styles.tabButtonTextStyle,
-               {color: selectedTab == 'job' ? Constant.iconColor : Constant.lightGrayColor},
-             ]}>
-             {Translation.customTabBarServices}
-           </Text>
-         </TouchableOpacity>
-       </View>}
+                styles.tabButtonSelectedBar,
+                {
+                  backgroundColor:
+                    selectedTab == 'job' ? Constant.primaryColor : '#ffffff00',
+                },
+              ]}
+            />
+            <TouchableOpacity
+              onPress={() => {
+                setSelectedTab('job');
+                navigation.navigate('JobList', {backDisable: true});
+              }}
+              style={{alignItems: 'center', justifyContent: 'center'}}>
+              <Feather
+                name={'briefcase'}
+                size={20}
+                color={
+                  selectedTab == 'job'
+                    ? Constant.iconColor
+                    : Constant.lightGrayColor
+                }
+              />
+              <Text
+                style={[
+                  styles.tabButtonTextStyle,
+                  {
+                    color:
+                      selectedTab == 'job'
+                        ? Constant.iconColor
+                        : Constant.lightGrayColor,
+                  },
+                ]}>
+                {Translation.customTabBarJobs}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        ) : (
+          <View style={styles.tabButtonParentStyle}>
+            <View
+              style={[
+                styles.tabButtonSelectedBar,
+                {
+                  backgroundColor:
+                    selectedTab == 'job' ? Constant.primaryColor : '#ffffff00',
+                },
+              ]}
+            />
+            <TouchableOpacity
+              onPress={() => {
+                setSelectedTab('job');
+                navigation.navigate('ServiceList', {backDisable: true});
+              }}
+              style={{alignItems: 'center', justifyContent: 'center'}}>
+              <Feather
+                name={'briefcase'}
+                size={20}
+                color={
+                  selectedTab == 'job'
+                    ? Constant.iconColor
+                    : Constant.lightGrayColor
+                }
+              />
+              <Text
+                style={[
+                  styles.tabButtonTextStyle,
+                  {
+                    color:
+                      selectedTab == 'job'
+                        ? Constant.iconColor
+                        : Constant.lightGrayColor,
+                  },
+                ]}>
+                {Translation.customTabBarServices}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        )}
 
         <TouchableOpacity
           style={styles.tabSearchButtonParentStyle}
@@ -153,12 +181,14 @@ const CustomTabBar = ({navigation}) => {
             <LinearGradient
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}
-              colors={['#FC8B92', '#FB5F69', '#FA4753']}
+              colors={['#ffe71d', '#ffc91d', '#fab71d']}
               style={styles.tabSearchLinearStyle}>
               <Feather name={'search'} size={20} color={Constant.whiteColor} />
             </LinearGradient>
           </View>
-          <Text style={styles.tabButtonTextStyle}>{Translation.customTabBarSearch}</Text>
+          <Text style={styles.tabButtonTextStyle}>
+            {Translation.customTabBarSearch}
+          </Text>
         </TouchableOpacity>
 
         <View style={styles.tabButtonParentStyle}>
@@ -182,14 +212,20 @@ const CustomTabBar = ({navigation}) => {
             <Feather
               name={'message-square'}
               size={20}
-              color={selectedTab == 'company' ? Constant.iconColor : Constant.lightGrayColor}
+              color={
+                selectedTab == 'company'
+                  ? Constant.iconColor
+                  : Constant.lightGrayColor
+              }
             />
             <Text
               style={[
                 styles.tabButtonTextStyle,
                 {
                   color:
-                    selectedTab == 'company' ? Constant.iconColor : Constant.lightGrayColor,
+                    selectedTab == 'company'
+                      ? Constant.iconColor
+                      : Constant.lightGrayColor,
                 },
               ]}>
               {Translation.customTabBarCompany}
@@ -215,14 +251,20 @@ const CustomTabBar = ({navigation}) => {
             <Feather
               name={'settings'}
               size={20}
-              color={selectedTab == 'setting' ? Constant.iconColor : Constant.lightGrayColor}
+              color={
+                selectedTab == 'setting'
+                  ? Constant.iconColor
+                  : Constant.lightGrayColor
+              }
             />
             <Text
               style={[
                 styles.tabButtonTextStyle,
                 {
                   color:
-                    selectedTab == 'setting' ? Constant.iconColor : Constant.lightGrayColor,
+                    selectedTab == 'setting'
+                      ? Constant.iconColor
+                      : Constant.lightGrayColor,
                 },
               ]}>
               {Translation.customTabBarSettings}
@@ -237,9 +279,10 @@ const CustomTabBar = ({navigation}) => {
         title={title}
         desc={desc}
         login={true}
-        loginAction={()=> {
-          setShowAlert(false)
-          navigation.navigate('Login')}}
+        loginAction={() => {
+          setShowAlert(false);
+          navigation.navigate('Login');
+        }}
       />
     </SafeAreaView>
   );
