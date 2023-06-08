@@ -1,4 +1,11 @@
-import {View, Text, Button, LogBox, Platform} from 'react-native';
+import {
+  View,
+  Text,
+  Button,
+  LogBox,
+  Platform,
+  PermissionsAndroid,
+} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
@@ -157,10 +164,21 @@ HomeStack = () => {
   );
 };
 
+const checkApplicationPermission = async () => {
+  if (Platform.OS === 'android') {
+    try {
+      await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
+      );
+    } catch (error) {}
+  }
+};
+
 const App = () => {
   useEffect(() => {
     (async () => {
       const token = await getFCMToken();
+      await checkApplicationPermission();
       subscribeNotification(token);
     })();
   }, []);
