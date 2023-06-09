@@ -13,19 +13,46 @@ export async function requestUserPermission() {
   if (enabled) {
     console.log('Authorization status:', authStatus);
   }
-  if (Platform.OS == 'ios') await messaging().registerDeviceForRemoteMessages();
+  // try {
+  //   if (Platform.OS == 'ios')
+  //     console.log('registerDeviceForRemoteMessages IOS');
+  //   // await messaging().registerDeviceForRemoteMessages();
+  // } catch (error) {
+  //   console.log('registerDeviceForRemoteMessages error', error);
+  // }
 }
 
 export const getFCMToken = async () => {
-  await requestUserPermission();
-  var token;
-  if (Platform.OS == 'ios') {
-    token = await messaging().getAPNSToken();
-  } else {
-    token = await messaging().getToken();
+  try {
+    await requestUserPermission();
+    var token;
+    if (Platform.OS == 'ios') {
+      try {
+        await messaging().registerDeviceForRemoteMessages();
+        messaging().setAutoInitEnabled(true);
+        const apns = await messaging().getAPNSToken();
+        await messaging().setAPNSToken(apns);
+        let tokenRefreshListenerUnsubscriber = messaging().onTokenRefresh(
+          token => {
+            console.log(
+              'we have a refreshed token and should do something with it: ' +
+                token,
+            );
+          },
+        );
+        token = await messaging().getToken();
+        console.log('sx', apns, 'token \n', token);
+      } catch (e) {
+        console.log('err', e);
+      }
+    } else {
+      token = await messaging().getToken();
+    }
+    console.log(`${Platform.OS} token`, token);
+    return token;
+  } catch (error) {
+    console.log('catch error', error);
   }
-  console.log(`${Platform.OS} token`, token);
-  return token;
 };
 
 export const subscribeNotification = async device_token => {
@@ -38,7 +65,7 @@ export const subscribeNotification = async device_token => {
       subscription: 'sub1',
     })
     .then(async response => {
-      console.log('response.data', response.data);
+      console.log('response.data', response.data, device_token);
       if (!response.data.error) {
         console.log('Subscribed');
       } else {

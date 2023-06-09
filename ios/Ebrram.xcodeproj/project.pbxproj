@@ -639,6 +639,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Ebrram/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ebrram;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,6 +669,7 @@
 				DEVELOPMENT_TEAM = RQZXXY42QD;
 				INFOPLIST_FILE = Ebrram/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Ebrram;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
