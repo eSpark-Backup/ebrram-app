@@ -40,7 +40,7 @@
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to save photos from the app to your gallery</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME)Please select photos.</string>
+	<string>$(PRODUCT_NAME) needs access to your photo library in order to provide you with a seamless and convenient experience. With your permission, you can easily save and manage photos directly from the app, allowing you to capture and preserve your accurate information. Rest assured that your privacy is important to us, and we will only access your photo library for the sole purpose of enhancing your user experience. Granting access will enable you to enjoy all the features and functionality this app has to offer.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>OpenSans-Bold.ttf</string>
