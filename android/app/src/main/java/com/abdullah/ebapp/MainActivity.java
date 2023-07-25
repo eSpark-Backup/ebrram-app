@@ -1,4 +1,4 @@
-package com.ebrram;
+package com.abdullah.ebapp;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
