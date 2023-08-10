@@ -36,7 +36,10 @@ const Header = ({
         dispatch(updateSearchView(false));
         break;
       case 'jobs':
-        navigation.navigate('JobListing', {searchWithNav: false,backDisable: false});
+        navigation.navigate('JobListing', {
+          searchWithNav: false,
+          backDisable: false,
+        });
         dispatch(updateSearchView(false));
         break;
       case 'employers':
@@ -44,7 +47,10 @@ const Header = ({
         dispatch(updateSearchView(false));
         break;
       case 'services':
-        navigation.navigate('ServicesList', {searchWithNav: false,backDisable: false});
+        navigation.navigate('ServicesList', {
+          searchWithNav: false,
+          backDisable: false,
+        });
         dispatch(updateSearchView(false));
         break;
       default:
@@ -86,7 +92,11 @@ const Header = ({
                   size={20}
                 />
                 <TextInput
-                  style={{marginLeft: 8,color:Constant.fontColor,fontFamily:Constant.primaryFontRegular}}
+                  style={{
+                    marginLeft: 8,
+                    color: Constant.fontColor,
+                    fontFamily: Constant.primaryFontRegular,
+                  }}
                   value={searchVal}
                   onChangeText={text => handleSearchValue(text)}
                   placeholder={Translation.globalStartSearch}
@@ -138,16 +148,13 @@ const Header = ({
           )}
 
           <TouchableOpacity
-          activeOpacity={0.7}
-          onPress={() =>
-            {
-              profileImage != "" &&
-              navigationforword.navigate('ImagePreview', {
-                item:{image: profileImage},
-              })
-            }
-          }
-          >
+            activeOpacity={0.7}
+            onPress={() => {
+              profileImage != '' &&
+                navigationforword.navigate('ImagePreview', {
+                  item: {image: profileImage},
+                });
+            }}>
             <Image
               style={styles.headerPhoto}
               source={
@@ -169,7 +176,7 @@ const Header = ({
           }}>
           <View
             style={{
-              backgroundColor:Constant.whiteColor,
+              backgroundColor: Constant.whiteColor,
               paddingHorizontal: 15,
               paddingVertical: 20,
               borderBottomLeftRadius: 20,
@@ -196,7 +203,9 @@ const Header = ({
                 alignItems: 'center',
                 marginTop: 10,
                 backgroundColor:
-                  searchType == 'freelancer' ? Constant.whiteColor : Constant.grayColor,
+                  searchType == 'freelancer'
+                    ? Constant.whiteColor
+                    : Constant.grayColor,
                 paddingVertical: 10,
                 paddingHorizontal: 10,
                 borderRadius: 10,
@@ -230,49 +239,52 @@ const Header = ({
                 {Translation.headerFreelancer}
               </Text>
             </TouchableOpacity>
-            {settings.user_meta.access_type.job_access == "yes" &&
+            {settings.user_meta.access_type.job_access == 'yes' && (
               <TouchableOpacity
-              onPress={() => setSearchType('jobs')}
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginTop: 10,
-                backgroundColor:
-                  searchType == 'jobs' ? Constant.whiteColor : Constant.grayColor,
-                paddingVertical: 10,
-                paddingHorizontal: 10,
-                borderRadius: 10,
-                borderWidth: 1,
-                borderColor:
-                  searchType == 'jobs'
-                    ? Constant.borderColor
-                    : Constant.whiteColor,
-              }}>
-              <View
-                style={[
-                  styles.CustomCheckOuterView,
-                  {
-                    backgroundColor:
-                      searchType == 'jobs'
-                        ? Constant.greenColor
-                        : Constant.whiteColor,
-                  },
-                ]}>
-                <View style={styles.CustomCheckInnerView} />
-              </View>
-
-              <Text
+                onPress={() => setSearchType('jobs')}
                 style={{
-                  fontSize: 16,
-                  lineHeight: 26,
-                  letterSpacing: 0.5,
-                  fontFamily: Constant.primaryFontSemiBold,
-                  color: Constant.fontColor,
-                  marginLeft: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginTop: 10,
+                  backgroundColor:
+                    searchType == 'jobs'
+                      ? Constant.whiteColor
+                      : Constant.grayColor,
+                  paddingVertical: 10,
+                  paddingHorizontal: 10,
+                  borderRadius: 10,
+                  borderWidth: 1,
+                  borderColor:
+                    searchType == 'jobs'
+                      ? Constant.borderColor
+                      : Constant.whiteColor,
                 }}>
-                {Translation.headerJobs}
-              </Text>
-            </TouchableOpacity>}
+                <View
+                  style={[
+                    styles.CustomCheckOuterView,
+                    {
+                      backgroundColor:
+                        searchType == 'jobs'
+                          ? Constant.greenColor
+                          : Constant.whiteColor,
+                    },
+                  ]}>
+                  <View style={styles.CustomCheckInnerView} />
+                </View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    lineHeight: 26,
+                    letterSpacing: 0.5,
+                    fontFamily: Constant.primaryFontSemiBold,
+                    color: Constant.fontColor,
+                    marginLeft: 10,
+                  }}>
+                  {Translation.headerJobs}
+                </Text>
+              </TouchableOpacity>
+            )}
             <TouchableOpacity
               onPress={() => setSearchType('employers')}
               style={{
@@ -280,7 +292,9 @@ const Header = ({
                 alignItems: 'center',
                 marginTop: 10,
                 backgroundColor:
-                  searchType == 'employers' ? Constant.whiteColor : Constant.grayColor,
+                  searchType == 'employers'
+                    ? Constant.whiteColor
+                    : Constant.grayColor,
                 paddingVertical: 10,
                 paddingHorizontal: 10,
                 borderRadius: 10,
@@ -315,49 +329,52 @@ const Header = ({
                 {Translation.headerEmployers}
               </Text>
             </TouchableOpacity>
-           {settings.user_meta.access_type.service_access == "yes" &&
-            <TouchableOpacity
-              onPress={() => setSearchType('services')}
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginTop: 10,
-                backgroundColor:
-                  searchType == 'services' ? Constant.whiteColor : Constant.grayColor,
-                paddingVertical: 10,
-                paddingHorizontal: 10,
-                borderRadius: 10,
-                borderWidth: 1,
-                borderColor:
-                  searchType == 'services'
-                    ? Constant.borderColor
-                    : Constant.whiteColor,
-              }}>
-              <View
-                style={[
-                  styles.CustomCheckOuterView,
-                  {
-                    backgroundColor:
-                      searchType == 'services'
-                        ? Constant.greenColor
-                        : Constant.whiteColor,
-                  },
-                ]}>
-                <View style={styles.CustomCheckInnerView} />
-              </View>
-
-              <Text
+            {settings.user_meta.access_type.service_access == 'yes' && (
+              <TouchableOpacity
+                onPress={() => setSearchType('services')}
                 style={{
-                  fontSize: 16,
-                  lineHeight: 26,
-                  letterSpacing: 0.5,
-                  fontFamily: Constant.primaryFontSemiBold,
-                  color: Constant.fontColor,
-                  marginLeft: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginTop: 10,
+                  backgroundColor:
+                    searchType == 'services'
+                      ? Constant.whiteColor
+                      : Constant.grayColor,
+                  paddingVertical: 10,
+                  paddingHorizontal: 10,
+                  borderRadius: 10,
+                  borderWidth: 1,
+                  borderColor:
+                    searchType == 'services'
+                      ? Constant.borderColor
+                      : Constant.whiteColor,
                 }}>
-                {Translation.headerServices}
-              </Text>
-            </TouchableOpacity>}
+                <View
+                  style={[
+                    styles.CustomCheckOuterView,
+                    {
+                      backgroundColor:
+                        searchType == 'services'
+                          ? Constant.greenColor
+                          : Constant.whiteColor,
+                    },
+                  ]}>
+                  <View style={styles.CustomCheckInnerView} />
+                </View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    lineHeight: 26,
+                    letterSpacing: 0.5,
+                    fontFamily: Constant.primaryFontSemiBold,
+                    color: Constant.fontColor,
+                    marginLeft: 10,
+                  }}>
+                  {Translation.headerServices}
+                </Text>
+              </TouchableOpacity>
+            )}
             {/* <View
               style={[
                 styles.managePortfolioSearchView,

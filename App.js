@@ -124,7 +124,7 @@ const Stack = createNativeStackNavigator();
 HomeStack = () => {
   // const [showSplash, setShowSplash] = useState(true);
   useEffect(() => {
-    Translation.setLanguage('en');
+    Translation.setLanguage('ar');
     // setTimeout(() => {
     //   setShowSplash(false);
     // }, 2000);
