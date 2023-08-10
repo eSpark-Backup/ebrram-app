@@ -7,6 +7,42 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:650577222722:android:24a55885c7237a53bee1db",
+        "android_client_info": {
+          "package_name": "com.abdullah.ebapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650577222722-7tr2tcovh61772qhvktdhpbdmf0p2135.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkExdO0rP2jn-xhp9cNKUft7HZ-3UJf78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650577222722-7tr2tcovh61772qhvktdhpbdmf0p2135.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "650577222722-vg5naa3t4oj3qg2724rddrtq22ngglop.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ebrram"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:650577222722:android:404a806043ba955dbee1db",
         "android_client_info": {
           "package_name": "com.ebrram"
@@ -29,6 +65,49 @@
             {
               "client_id": "650577222722-7tr2tcovh61772qhvktdhpbdmf0p2135.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "650577222722-vg5naa3t4oj3qg2724rddrtq22ngglop.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ebrram"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650577222722:android:432a917c8fb7c6b0bee1db",
+        "android_client_info": {
+          "package_name": "com.ebrram.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650577222722-7tr2tcovh61772qhvktdhpbdmf0p2135.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkExdO0rP2jn-xhp9cNKUft7HZ-3UJf78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650577222722-7tr2tcovh61772qhvktdhpbdmf0p2135.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "650577222722-vg5naa3t4oj3qg2724rddrtq22ngglop.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ebrram"
+              }
             }
           ]
         }

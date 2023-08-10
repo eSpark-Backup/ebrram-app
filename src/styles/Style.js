@@ -771,7 +771,7 @@ export default StyleSheet.create({
     width: '32%',
   },
   homeJobTextStyle: {
-    fontSize: 16,
+    fontSize: 12,
     lineHeight: 26,
     letterSpacing: 0.5,
     fontFamily: Constant.primaryFontMedium,
@@ -788,7 +788,7 @@ export default StyleSheet.create({
     width: '32%',
   },
   homeEmployerButtonStyle: {
-    fontSize: 16,
+    fontSize: 12,
     lineHeight: 26,
     letterSpacing: 0.5,
     fontFamily: Constant.primaryFontMedium,
@@ -805,7 +805,7 @@ export default StyleSheet.create({
     width: '32%',
   },
   homeServiceTextStyle: {
-    fontSize: 16,
+    fontSize: 12,
     lineHeight: 26,
     letterSpacing: 0.5,
     fontFamily: Constant.primaryFontMedium,
