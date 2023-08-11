@@ -244,7 +244,7 @@ const InvoiceList = () => {
         backColor={Constant.whiteColor}
         iconColor={Constant.iconColor}
         heading={true}
-        title={'Invoices'}
+        title={Translation.invoiceInvoices}
       />
       <Notification
         show={showAlert}
@@ -299,7 +299,7 @@ const InvoiceList = () => {
                     styles.inputHeading,
                     {alignSelf: 'center', fontSize: 16, marginTop: 0},
                   ]}>
-                  No record found
+                  {Translation.globalNoRecordFound}
                 </Text>
               </>
             }

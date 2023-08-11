@@ -486,7 +486,9 @@ const customDrawer = ({navigation}) => {
                     size={18}
                     color={Constant.iconColor}
                   />
-                  <Text style={styles.drawerItemTextStyle}>Settings</Text>
+                  <Text style={styles.drawerItemTextStyle}>
+                    {Translation.customDrawerSettings}
+                  </Text>
                 </View>
                 <Feather
                   name={openTab == 'setting' ? 'chevron-up' : 'chevron-down'}

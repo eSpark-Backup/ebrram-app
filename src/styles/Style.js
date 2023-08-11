@@ -742,7 +742,7 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
   },
   homeFreelancerHeadingTextStyle: {
-    fontSize: 18,
+    fontSize: 20,
     lineHeight: 26,
     letterSpacing: 0.5,
     fontFamily: Constant.primaryFontMedium,

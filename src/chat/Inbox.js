@@ -65,7 +65,7 @@ const Inbox = ({navigation}) => {
       .then(response => response.json())
       .then(responseJson => {
         setChatData(responseJson.chats);
-        setSearchChatData(responseJson.chats)
+        setSearchChatData(responseJson.chats);
         setLoader(false);
       })
       .catch(error => {
@@ -74,12 +74,12 @@ const Inbox = ({navigation}) => {
       });
   };
   const handleSearch = text => {
-    const formattedQuery = text.toLowerCase()
-    const newData = chatData.filter((item) => {
-      return item.user_name.toLowerCase().includes(formattedQuery)
-    })
-    setSearchChatData(newData)
-  }
+    const formattedQuery = text.toLowerCase();
+    const newData = chatData.filter(item => {
+      return item.user_name.toLowerCase().includes(formattedQuery);
+    });
+    setSearchChatData(newData);
+  };
   const openMessageDetails = item => {
     navigation.navigate('MessageDetail', {data: item});
   };
@@ -89,7 +89,7 @@ const Inbox = ({navigation}) => {
         backColor={Constant.whiteColor}
         iconColor={Constant.iconColor}
         heading={true}
-        title={'Inbox'}
+        title={Translation.inboxInbox}
       />
       <View
         style={{
@@ -104,7 +104,7 @@ const Inbox = ({navigation}) => {
           <View style={styles.managePortfolioSearchView}>
             <Feather name="search" color={Constant.lightGrayColor} size={20} />
             <TextInput
-              style={{marginLeft: 8, width: '87%', color:Constant.fontColor}}
+              style={{marginLeft: 8, width: '87%', color: Constant.fontColor}}
               // value={search}
               onChangeText={handleSearch}
               placeholder={Translation.inboxSearch}

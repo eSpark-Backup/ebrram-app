@@ -401,7 +401,7 @@ const Header = ({
             </View> */}
             <FormButton
               onPress={() => searchListing()}
-              buttonTitle={'Search now'}
+              buttonTitle={Translation.headerSearchNow}
               backgroundColor={Constant.primaryColor}
               textColor={Constant.whiteColor}
               iconName={'filter'}

@@ -75,6 +75,7 @@ const strings = new LocalizedStrings({
     signUpText: 'Sign up now',
 
     // For Inbox.js & all SearchField
+    inboxInbox: 'Inbox',
     inboxSearch: 'Search by title',
 
     // For ListCard.js
@@ -89,8 +90,10 @@ const strings = new LocalizedStrings({
     headerJobs: 'Jobs',
     headerEmployers: 'Employers',
     headerServices: 'Services',
+    headerSearchNow: 'Search now',
 
     // For Dashboard.js
+    dashboardDashboard: 'Dashboard',
     dashboardMessage: 'New Messages',
     dashboardProposals: 'Latest Proposals',
     dashboardView: 'View all saved \n Items',
@@ -111,6 +114,7 @@ const strings = new LocalizedStrings({
     dashboardUpgrade: 'Upgrade Now',
 
     //For Dispute.js
+    disputeDisputes: 'Disputes',
     disputeCreate: 'Create disputes',
     disputeSubject: 'Subject:',
     disputeService: 'Project/Service:',
@@ -134,6 +138,7 @@ const strings = new LocalizedStrings({
     customDrawerDashboard: 'Dashboard',
     customDrawerInbox: 'Inbox',
     customDrawerProfile: 'View profile',
+    customDrawerSettings: 'Settings',
     customDrawerIdentity: ' Identity verification',
     customDrawerEdit: 'Edit my profile',
     customDrawerPayout: 'Payout settings',
@@ -308,6 +313,7 @@ const strings = new LocalizedStrings({
     identityVerificationReUpload: 'Cancel & Re-Upload',
 
     // For InvoiceList.js
+    invoiceInvoices: 'Invoices',
     invoiceListViewable: 'Invoice details are only viewable on web screens.',
     invoiceListOrder: 'Order ID:',
     invoiceListCreated: 'Created Date:',
@@ -527,6 +533,7 @@ const strings = new LocalizedStrings({
     savedItemHeader: 'Saved item',
 
     //For ProfileSetting.js
+    profileSettingEditMyProfile: 'Edit my profile',
     profileSettingTabPersonalDetailSkill: 'Personal details & skill',
     profileSettingTabExpEdu: 'Experience & education',
     profileSettingTabSocialProfiles: 'Social profiles',
@@ -1112,6 +1119,7 @@ const strings = new LocalizedStrings({
     signUpText: 'سجّل الانضمام الآن',
 
     // For Inbox.js & all SearchField
+    inboxInbox: 'صندوق الوارد',
     inboxSearch: 'البحث حسب العنوان',
 
     // For ListCard.js
@@ -1126,8 +1134,10 @@ const strings = new LocalizedStrings({
     headerJobs: 'وظائف',
     headerEmployers: 'أرباب العمل',
     headerServices: 'خدمات',
+    headerSearchNow: 'ابحث الآن',
 
     // For Dashboard.js
+    dashboardDashboard: 'لوحة التحكم',
     dashboardMessage: 'رسائل جديدة',
     dashboardProposals: 'أحدث العروض',
     dashboardView: 'عرض جميع العناصر المحفوظة \n هنا',
@@ -1148,6 +1158,7 @@ const strings = new LocalizedStrings({
     dashboardUpgrade: 'ترقية الباقة الآن',
 
     //For Dispute.js
+    disputeDisputes: 'النزاعات',
     disputeCreate: 'إنشاء نزاعات',
     disputeSubject: 'الموضوع:',
     disputeService: 'المشروع / الخدمة:',
@@ -1170,6 +1181,7 @@ const strings = new LocalizedStrings({
     customDrawerDashboard: 'لوحة التحكم',
     customDrawerInbox: 'صندوق الوارد',
     customDrawerProfile: 'عرض الملف الشخصي',
+    customDrawerSettings: 'الإعدادات',
     customDrawerIdentity: 'التحقق من الهوية',
     customDrawerEdit: 'تعديل الملف الشخصي',
     customDrawerPayout: 'إعدادات الدفع',
@@ -1343,6 +1355,7 @@ const strings = new LocalizedStrings({
     identityVerificationReUpload: 'إلغاء وإعادة التحميل',
 
     // For InvoiceList.js
+    invoiceInvoices: 'الفواتير',
     invoiceListViewable: 'تفاصيل الفاتورة قابلة للعرض فقط على شاشات الويب.',
     invoiceListOrder: 'رقم الطلب:',
     invoiceListCreated: 'تاريخ الإنشاء:',
@@ -1562,6 +1575,7 @@ const strings = new LocalizedStrings({
     savedItemHeader: 'العنصر المحفوظ',
 
     //For ProfileSetting.js
+    profileSettingEditMyProfile: 'تعديل الملف الشخصي',
     profileSettingTabPersonalDetailSkill: 'تفاصيل الشخصية والمهارة',
     profileSettingTabExpEdu: 'الخبرة والتعليم',
     profileSettingTabSocialProfiles: 'الملفات الاجتماعية',

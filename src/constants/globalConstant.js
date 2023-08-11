@@ -28,14 +28,18 @@ export const blueColor = '#1DA1F2';
 export const lightGrayColor = '#999999';
 export const astaricColor = '#FAB71D';
 
-export const primaryFontBold = 'Comfortaa-Bold';
-export const primaryFontRegular = 'Comfortaa-Regular';
-export const primaryFontMedium = 'Comfortaa-Medium';
-export const primaryFontSemiBold = 'Comfortaa-SemiBold';
-export const secondryFontBold = 'OpenSans-Bold';
-export const secondryFontRegular = 'OpenSans-Regular';
-export const secondryFontMedium = 'OpenSans-Medium';
-export const secondryFontSemiBold = 'OpenSans-SemiBold';
+export const primaryFontBold = 'NotoNaskhArabic-Bold';
+export const primaryFontRegular = 'NotoNaskhArabic-Regular';
+export const primaryFontMedium = 'NotoNaskhArabic-Medium';
+export const primaryFontSemiBold = 'NotoNaskhArabic-SemiBold';
+export const secondryFontBold = 'NotoNaskhArabic-Bold';
+export const secondryFontRegular = 'NotoNaskhArabic-Regular';
+export const secondryFontMedium = 'NotoNaskhArabic-Medium';
+export const secondryFontSemiBold = 'NotoNaskhArabic-SemiBold';
+// export const secondryFontBold = 'OpenSans-Bold';
+// export const secondryFontRegular = 'OpenSans-Regular';
+// export const secondryFontMedium = 'OpenSans-Medium';
+// export const secondryFontSemiBold = 'OpenSans-SemiBold';
 // Constant.darkGrayColor
 
 export const restApiKey =
