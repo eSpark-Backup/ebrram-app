@@ -45,6 +45,7 @@ import Dashboard from './src/dashboard/Dashboard';
 import ManageJobs from './src/manageJobs/ManageJobs';
 import ManageProposals from './src/manageJobs/ManageProposals';
 import HelpAndSupport from './src/helpAndSupport/HelpAndSupport';
+import Language from './src/language/Language';
 import ViewHistory from './src/manageJobs/ViewHistory';
 import BlogListing from './src/home/BlogListing';
 import BlogDetail from './src/home/BlogDetail';
@@ -86,6 +87,7 @@ HomeTab = () => {
 };
 
 const Drawer = createDrawerNavigator();
+
 HomeDrawer = () => {
   return (
     <Drawer.Navigator
@@ -114,6 +116,7 @@ HomeDrawer = () => {
       <Drawer.Screen name="InvoiceList" component={InvoiceList} />
       <Drawer.Screen name="Inbox" component={Inbox} />
       <Drawer.Screen name="HelpAndSupport" component={HelpAndSupport} />
+      <Drawer.Screen name="Language" component={Language} />
       <Drawer.Screen name="Dispute" component={Dispute} />
       <Tab.Screen name="EditProfile" component={ProfileSetting} />
     </Drawer.Navigator>
@@ -121,14 +124,18 @@ HomeDrawer = () => {
 };
 
 const Stack = createNativeStackNavigator();
-HomeStack = () => {
-  // const [showSplash, setShowSplash] = useState(true);
-  useEffect(() => {
-    Translation.setLanguage('ar');
-    // setTimeout(() => {
-    //   setShowSplash(false);
-    // }, 2000);
-  }, []);
+const HomeStack = () => {
+  const [showSplash, setShowSplash] = useState(true);
+  // const language = useSelector(state => state.global.currentLanguage);
+
+  // useEffect(() => {
+  //   Translation.setLanguage('ar');
+  //   setTimeout(() => {
+  //     // setShowSplash(false);
+  //     setShowSplash(!showSplash);
+  //   }, 5000);
+  // }, []);
+
   return (
     <Stack.Navigator
       screenOptions={{

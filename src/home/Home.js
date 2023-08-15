@@ -66,6 +66,7 @@ const Home = ({navigation}) => {
   const settings = useSelector(state => state.setting.settings);
   const dispatch = useDispatch();
 
+  const [update, setUpdate] = useState({});
   const [loader, setLoader] = useState(false);
   const [jobCategories, setJobCategories] = useState([]);
   const [serviceCategories, setServicesCategories] = useState([]);
@@ -82,6 +83,15 @@ const Home = ({navigation}) => {
   const [blogSpinner, setBlogSpinner] = useState(true);
   const [freelancersSpinner, setFreelancersSpinner] = useState(true);
   const [blogList, setBlogList] = useState([]);
+
+  const language = useSelector(state => state.global.currentLanguage);
+
+  useEffect(() => {
+    Translation.setLanguage(language);
+    // setTimeout(() => {
+    //   setShowSplash(false);
+    // }, 2000);
+  }, []);
 
   useEffect(() => {
     if (isFocused) {
@@ -745,7 +755,7 @@ const Home = ({navigation}) => {
             onPress={() => navigation.navigate('FreelancersList')}
             style={styles.homeFreelancerParentStyle}>
             <View style={styles.homeFreelancerHeadingParentStyle}>
-              <View>
+              <View style={{alignItems: 'flex-start'}}>
                 <Text style={styles.homeFreelancerHeadingTextStyle}>
                   {Translation.homeFreelancers}
                 </Text>

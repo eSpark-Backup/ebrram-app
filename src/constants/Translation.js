@@ -169,6 +169,7 @@ const strings = new LocalizedStrings({
     customDrawerInvoices: 'Invoices',
     customDrawerDisputes: 'Disputes',
     customDrawerSignup: 'Signup',
+    customDrawerLanguage: 'Language',
     customDrawerHelp: 'Help & support',
     customDrawerPackages: 'Packages',
     customDrawerLogout: 'Logout',
@@ -1043,6 +1044,13 @@ const strings = new LocalizedStrings({
     viewHistoryCancelReason: 'Cancel reason',
     viewHistoryReason: 'Reason',
     viewHistoryTypeReason: 'Type reason here',
+
+    //For Language.js
+    languageLangauge: 'Language',
+    languageChangeAppLanguage: 'Change your App language',
+    languageSelectLanguage: 'Select language',
+    languageArabic: 'العربية',
+    languageEnglish: 'English',
   },
   ar: {
     //global
@@ -1212,6 +1220,7 @@ const strings = new LocalizedStrings({
     customDrawerInvoices: 'الفواتير',
     customDrawerDisputes: 'النزاعات',
     customDrawerSignup: 'التسجيل',
+    customDrawerLanguage: 'لغة',
     customDrawerHelp: 'المساعدة والدعم',
     customDrawerPackages: 'الباقات',
     customDrawerLogout: 'تسجيل الخروج',
@@ -2084,6 +2093,13 @@ const strings = new LocalizedStrings({
     viewHistoryCancelReason: 'سبب الإلغاء',
     viewHistoryReason: 'السبب',
     viewHistoryTypeReason: 'اكتب السبب هنا',
+
+    //For Language.js
+    languageLangauge: 'لغة',
+    languageChangeAppLanguage: 'تغيير لغة التطبيق الخاص بك',
+    languageSelectLanguage: 'اختار اللغة',
+    languageArabic: 'العربية',
+    languageEnglish: 'English',
   },
 });
 export default strings;

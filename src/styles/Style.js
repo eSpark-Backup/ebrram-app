@@ -722,6 +722,7 @@ export default StyleSheet.create({
     shadowColor: '#000000',
     shadowOpacity: 0.1,
     marginTop: 15,
+    alignItems: 'flex-start',
   },
   homeHeadingStyle: {
     fontSize: 18,
@@ -736,6 +737,7 @@ export default StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 25,
     borderRadius: 5,
+    width: '100%',
   },
   homeFreelancerHeadingParentStyle: {
     flexDirection: 'row',
@@ -1817,6 +1819,13 @@ export default StyleSheet.create({
     letterSpacing: 0.5,
     color: Constant.fontColor,
     marginLeft: 15,
+  },
+  drawerToggleTextStyle: {
+    fontFamily: Constant.primaryFontRegular,
+    fontSize: 14,
+    lineHeight: 24,
+    letterSpacing: 0.5,
+    color: Constant.fontColor,
   },
   drawerImageBackgeoundStyle: {
     width: '100%',
