@@ -7,6 +7,7 @@ import {
   FlatList,
   TouchableOpacity,
   TextInput,
+  ActivityIndicator,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 
@@ -84,10 +85,7 @@ const Home = ({navigation}) => {
   const [freelancersSpinner, setFreelancersSpinner] = useState(true);
   const [blogList, setBlogList] = useState([]);
 
-  const language = useSelector(state => state.global.currentLanguage);
-
   useEffect(() => {
-    Translation.setLanguage(language);
     // setTimeout(() => {
     //   setShowSplash(false);
     // }, 2000);

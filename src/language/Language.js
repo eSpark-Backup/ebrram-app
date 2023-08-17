@@ -7,8 +7,14 @@ import {
   TouchableOpacity,
   ScrollView,
   I18nManager,
+  Alert,
+  Platform,
+  BackHandler,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
+import RNRestart from 'react-native-restart';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import RNExitApp from 'react-native-exit-app';
 import * as Constant from '../constants/globalConstant';
 import {useSelector, useDispatch} from 'react-redux';
 import Header from '../components/Header';
@@ -20,16 +26,13 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import styles from '../styles/Style';
 import FormButton from '../components/FormButton';
 import Translation from '../constants/Translation';
-import {updateCurrentLanguage} from '../redux/GlobalStateSlice';
 
 const Language = () => {
-  const dispatch = useDispatch();
   const token = useSelector(state => state.value.token);
   const userInfo = useSelector(state => state.value.userInfo);
-  const language = useSelector(state => state.global.currentLanguage);
 
   const [openReason, setOpenReason] = useState(false);
-  const [reasonValue, setReasonValue] = useState(language);
+  const [reasonValue, setReasonValue] = useState(null);
   const [reasonItems, setReasonItems] = useState([
     {id: 1, label: Translation.languageArabic, value: 'ar'},
     {id: 2, label: Translation.languageEnglish, value: 'en'},
@@ -43,15 +46,59 @@ const Language = () => {
       color: Constant.fontColor,
     },
   };
-  const getVal = async val => {
-    dispatch(updateCurrentLanguage(val()));
-    Translation.setLanguage(val());
-    setReasonValue(val());
-    val() == 'ar'
-      ? await I18nManager.forceRTL(true)
-      : await I18nManager.forceRTL(false);
+
+  const getCurrentlanguage = async () => {
+    const value = await AsyncStorage.getItem('app-language');
+    if (value !== null) {
+      setReasonValue(value);
+    } else {
+      setReasonValue(Translation.getLanguage());
+    }
   };
-  useEffect(() => {}, []);
+
+  const updateCurrentlanguage = async value => {
+    await AsyncStorage.setItem('app-language', value);
+  };
+
+  const getVal = async val => {
+    updateCurrentlanguage(val());
+    setReasonValue(val());
+
+    if (val() == 'ar') {
+      I18nManager.forceRTL(true);
+      restartAlert();
+    } else {
+      I18nManager.forceRTL(false);
+      restartAlert();
+    }
+  };
+
+  const restartAlert = () => {
+    Alert.alert(
+      Platform.OS == 'ios'
+        ? Translation.languageRestartAlertHeadingIOS
+        : Translation.languageRestartAlertHeading,
+      Translation.languageRestartAlertMessage,
+      [
+        {
+          text:
+            Platform.OS == 'ios'
+              ? Translation.languageRestartAlertButtonIOS
+              : Translation.languageRestartAlertButton,
+          // text: 'Restart now',
+          onPress: () =>
+            Platform.OS == 'ios'
+              ? console.log('Restart manually')
+              : RNRestart.restart(),
+        },
+      ],
+      {cancelable: false},
+    );
+  };
+
+  useEffect(() => {
+    getCurrentlanguage();
+  }, []);
 
   return (
     <SafeAreaView style={styles.globalContainer}>

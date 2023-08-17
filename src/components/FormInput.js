@@ -1,9 +1,5 @@
 import React, {useState} from 'react';
-import {
-  View,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
+import {View, TextInput, TouchableOpacity} from 'react-native';
 import styles from '../styles/Style';
 import * as Constant from '../constants/globalConstant';
 import Feather from 'react-native-vector-icons/Feather';
@@ -48,9 +44,9 @@ const FormInput = ({
           />
         </TouchableOpacity>
       ) : (
-        <TouchableOpacity 
-        onPress={()=> action ? actionIcon() : console.log("icon")}
-        style={styles.iconStyle}>
+        <TouchableOpacity
+          onPress={() => (action ? actionIcon() : console.log('icon'))}
+          style={styles.iconStyle}>
           <Feather name={iconType} size={20} color={iconColor} />
         </TouchableOpacity>
       )}

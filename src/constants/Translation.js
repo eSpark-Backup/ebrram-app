@@ -1051,6 +1051,12 @@ const strings = new LocalizedStrings({
     languageSelectLanguage: 'Select language',
     languageArabic: 'العربية',
     languageEnglish: 'English',
+    languageRestartAlertHeading: 'Restart app',
+    languageRestartAlertHeadingIOS: 'Restart app manually',
+    languageRestartAlertMessage:
+      'You have changed the app language. You need to restart the app for it to be effective.',
+    languageRestartAlertButton: 'Restart now',
+    languageRestartAlertButtonIOS: 'Okay',
   },
   ar: {
     //global
@@ -2100,6 +2106,12 @@ const strings = new LocalizedStrings({
     languageSelectLanguage: 'اختار اللغة',
     languageArabic: 'العربية',
     languageEnglish: 'English',
+    languageRestartAlertHeading: 'أعد تشغيل التطبيق',
+    languageRestartAlertHeadingIOS: 'أعد تشغيل التطبيق يدويًا',
+    languageRestartAlertMessage:
+      'لقد قمت بتغيير لغة التطبيق. تحتاج إلى إعادة تشغيل التطبيق حتى يكون فعالاً.',
+    languageRestartAlertButton: 'اعد البدء الان',
+    languageRestartAlertButtonIOS: 'تمام',
   },
 });
 export default strings;

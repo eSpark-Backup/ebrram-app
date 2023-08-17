@@ -5,12 +5,16 @@ import {
   LogBox,
   Platform,
   PermissionsAndroid,
+  I18nManager,
+  ActivityIndicator,
+  AppState,
 } from 'react-native';
 import React, {useState, useEffect, useCallback} from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Home from './src/home/Home';
 import CustomTabBar from './src/tabBar/CustomTabBar';
 import CustomDrawer from './src/drawer/customDrawer';
@@ -94,6 +98,7 @@ HomeDrawer = () => {
       drawerContent={props => <CustomDrawer {...props} />}
       screenOptions={{
         headerShown: false,
+        drawerPosition: I18nManager.isRTL ? 'right' : 'left',
       }}>
       <Drawer.Screen name="DashboardTab" component={HomeTab} />
       <Drawer.Screen name="Dashboard" component={Dashboard} />
@@ -126,15 +131,57 @@ HomeDrawer = () => {
 const Stack = createNativeStackNavigator();
 const HomeStack = () => {
   const [showSplash, setShowSplash] = useState(true);
+  const [appState, setAppState] = useState(AppState.currentState);
+  const getCurrentlanguage = async () => {
+    const value = await AsyncStorage.getItem('app-language');
+    if (value !== null) {
+      Translation.setLanguage(value);
+    }
+  };
   // const language = useSelector(state => state.global.currentLanguage);
 
-  // useEffect(() => {
-  //   Translation.setLanguage('ar');
-  //   setTimeout(() => {
-  //     // setShowSplash(false);
-  //     setShowSplash(!showSplash);
-  //   }, 5000);
-  // }, []);
+  const _handleAppStateChange = async nextAppState => {
+    if (
+      AppState.currentState.match(/inactive|background/) &&
+      nextAppState === 'active'
+    ) {
+      console.log('App has come to the foreground!');
+    }
+    console.log('nextAppState', nextAppState);
+    const currLang = await AsyncStorage.getItem('app-language');
+    if (nextAppState == 'background') {
+      console.log('Translation.getlang', Translation.getLanguage(), currLang);
+      if (
+        currLang == 'ar' ||
+        (currLang == null && Translation.getLanguage() == 'ar')
+      ) {
+        I18nManager.forceRTL(true);
+      } else {
+        I18nManager.forceRTL(false);
+      }
+    }
+    setAppState(nextAppState);
+  };
+
+  console.log('AppState', appState);
+
+  useEffect(() => {
+    console.log(
+      'current language',
+      Translation.getLanguage(),
+      I18nManager.isRTL,
+    );
+    AppState.addEventListener('change', _handleAppStateChange);
+
+    getCurrentlanguage();
+    //   setTimeout(() => {
+    //     // setShowSplash(false);
+    //     setShowSplash(!showSplash);
+    //   }, 5000);
+    return () => {
+      AppState.removeEventListener('change', _handleAppStateChange);
+    };
+  }, []);
 
   return (
     <Stack.Navigator
@@ -185,6 +232,7 @@ const App = () => {
   useEffect(() => {
     (async () => {
       try {
+        // Translation.setLanguage('ar');
         const token = await getFCMToken();
         await checkApplicationPermission();
         subscribeNotification(token);

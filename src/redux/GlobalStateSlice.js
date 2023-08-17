@@ -8,7 +8,6 @@ export const GlobalStateSlice = createSlice({
     serviceTab: 0,
     serviceItem: {},
     qouteItem: {},
-    currentLanguage: 'ar',
     languageTaxonomy: [],
     locationTaxonomy: [],
     categoryTaxonomy: [],
@@ -36,9 +35,6 @@ export const GlobalStateSlice = createSlice({
   reducers: {
     updateSearchView: (state, action) => {
       state.serach = action.payload;
-    },
-    updateCurrentLanguage: (state, action) => {
-      state.currentLanguage = action.payload;
     },
     updateProjectTab: (state, action) => {
       state.projectTab = action.payload;
@@ -127,7 +123,6 @@ export const GlobalStateSlice = createSlice({
   },
 });
 export const {
-  updateCurrentLanguage,
   updateSearchView,
   updateProjectTab,
   updateJobTab,
