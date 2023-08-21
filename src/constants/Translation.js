@@ -75,7 +75,6 @@ const strings = new LocalizedStrings({
     signUpText: 'Sign up now',
 
     // For Inbox.js & all SearchField
-    inboxInbox: 'Inbox',
     inboxSearch: 'Search by title',
 
     // For ListCard.js
@@ -90,10 +89,8 @@ const strings = new LocalizedStrings({
     headerJobs: 'Jobs',
     headerEmployers: 'Employers',
     headerServices: 'Services',
-    headerSearchNow: 'Search now',
 
     // For Dashboard.js
-    dashboardDashboard: 'Dashboard',
     dashboardMessage: 'New Messages',
     dashboardProposals: 'Latest Proposals',
     dashboardView: 'View all saved \n Items',
@@ -114,7 +111,6 @@ const strings = new LocalizedStrings({
     dashboardUpgrade: 'Upgrade Now',
 
     //For Dispute.js
-    disputeDisputes: 'Disputes',
     disputeCreate: 'Create disputes',
     disputeSubject: 'Subject:',
     disputeService: 'Project/Service:',
@@ -138,7 +134,6 @@ const strings = new LocalizedStrings({
     customDrawerDashboard: 'Dashboard',
     customDrawerInbox: 'Inbox',
     customDrawerProfile: 'View profile',
-    customDrawerSettings: 'Settings',
     customDrawerIdentity: ' Identity verification',
     customDrawerEdit: 'Edit my profile',
     customDrawerPayout: 'Payout settings',
@@ -169,7 +164,6 @@ const strings = new LocalizedStrings({
     customDrawerInvoices: 'Invoices',
     customDrawerDisputes: 'Disputes',
     customDrawerSignup: 'Signup',
-    customDrawerLanguage: 'Language',
     customDrawerHelp: 'Help & support',
     customDrawerPackages: 'Packages',
     customDrawerLogout: 'Logout',
@@ -314,7 +308,6 @@ const strings = new LocalizedStrings({
     identityVerificationReUpload: 'Cancel & Re-Upload',
 
     // For InvoiceList.js
-    invoiceInvoices: 'Invoices',
     invoiceListViewable: 'Invoice details are only viewable on web screens.',
     invoiceListOrder: 'Order ID:',
     invoiceListCreated: 'Created Date:',
@@ -534,7 +527,6 @@ const strings = new LocalizedStrings({
     savedItemHeader: 'Saved item',
 
     //For ProfileSetting.js
-    profileSettingEditMyProfile: 'Edit my profile',
     profileSettingTabPersonalDetailSkill: 'Personal details & skill',
     profileSettingTabExpEdu: 'Experience & education',
     profileSettingTabSocialProfiles: 'Social profiles',
@@ -1044,19 +1036,6 @@ const strings = new LocalizedStrings({
     viewHistoryCancelReason: 'Cancel reason',
     viewHistoryReason: 'Reason',
     viewHistoryTypeReason: 'Type reason here',
-
-    //For Language.js
-    languageLangauge: 'Language',
-    languageChangeAppLanguage: 'Change your App language',
-    languageSelectLanguage: 'Select language',
-    languageArabic: 'العربية',
-    languageEnglish: 'English',
-    languageRestartAlertHeading: 'Restart app',
-    languageRestartAlertHeadingIOS: 'Restart app manually',
-    languageRestartAlertMessage:
-      'You have changed the app language. You need to restart the app for it to be effective.',
-    languageRestartAlertButton: 'Restart now',
-    languageRestartAlertButtonIOS: 'Okay',
   },
   ar: {
     //global
@@ -1133,7 +1112,6 @@ const strings = new LocalizedStrings({
     signUpText: 'سجّل الانضمام الآن',
 
     // For Inbox.js & all SearchField
-    inboxInbox: 'صندوق الوارد',
     inboxSearch: 'البحث حسب العنوان',
 
     // For ListCard.js
@@ -1148,10 +1126,8 @@ const strings = new LocalizedStrings({
     headerJobs: 'وظائف',
     headerEmployers: 'أرباب العمل',
     headerServices: 'خدمات',
-    headerSearchNow: 'ابحث الآن',
 
     // For Dashboard.js
-    dashboardDashboard: 'لوحة التحكم',
     dashboardMessage: 'رسائل جديدة',
     dashboardProposals: 'أحدث العروض',
     dashboardView: 'عرض جميع العناصر المحفوظة \n هنا',
@@ -1172,7 +1148,6 @@ const strings = new LocalizedStrings({
     dashboardUpgrade: 'ترقية الباقة الآن',
 
     //For Dispute.js
-    disputeDisputes: 'النزاعات',
     disputeCreate: 'إنشاء نزاعات',
     disputeSubject: 'الموضوع:',
     disputeService: 'المشروع / الخدمة:',
@@ -1195,7 +1170,6 @@ const strings = new LocalizedStrings({
     customDrawerDashboard: 'لوحة التحكم',
     customDrawerInbox: 'صندوق الوارد',
     customDrawerProfile: 'عرض الملف الشخصي',
-    customDrawerSettings: 'الإعدادات',
     customDrawerIdentity: 'التحقق من الهوية',
     customDrawerEdit: 'تعديل الملف الشخصي',
     customDrawerPayout: 'إعدادات الدفع',
@@ -1226,7 +1200,6 @@ const strings = new LocalizedStrings({
     customDrawerInvoices: 'الفواتير',
     customDrawerDisputes: 'النزاعات',
     customDrawerSignup: 'التسجيل',
-    customDrawerLanguage: 'لغة',
     customDrawerHelp: 'المساعدة والدعم',
     customDrawerPackages: 'الباقات',
     customDrawerLogout: 'تسجيل الخروج',
@@ -1370,7 +1343,6 @@ const strings = new LocalizedStrings({
     identityVerificationReUpload: 'إلغاء وإعادة التحميل',
 
     // For InvoiceList.js
-    invoiceInvoices: 'الفواتير',
     invoiceListViewable: 'تفاصيل الفاتورة قابلة للعرض فقط على شاشات الويب.',
     invoiceListOrder: 'رقم الطلب:',
     invoiceListCreated: 'تاريخ الإنشاء:',
@@ -1555,7 +1527,7 @@ const strings = new LocalizedStrings({
     serviceDetailReviews: 'تقييمات',
     serviceDetailReview: 'تقييم',
     serviceDetailDescription: 'الوصف',
-    serviceDetailLanguagesSpeak: 'اللغات التي يستطيع العامل الحر التحدث بها',
+    serviceDetailLanguagesSpeak: 'اللغات التي يستطيع المستقلدالتحدث بها',
     serviceDetailAboutSeller: 'عن البائع',
     serviceDetailSince: 'منذ: ',
     serviceDetailStartingFrom: 'بدءًا من',
@@ -1575,7 +1547,7 @@ const strings = new LocalizedStrings({
     serviceDetailMessage: 'الرسالة',
     serviceDetailMessagePlaceholder: 'اكتب الرسالة هنا',
     serviceDetailReportSendMessageFreelancer:
-      'انقر على الزر لإرسال رسالة إلى هذا العامل الحر',
+      'انقر على الزر لإرسال رسالة إلى هذاالمستقل ',
     serviceDetailSendMessage: 'إرسال الرسالة',
     serviceDetailReportService: 'الإبلاغ عن هذه الخدمة',
     serviceDetailReason: 'السبب',
@@ -1586,11 +1558,10 @@ const strings = new LocalizedStrings({
     savedItemTabSavedJobs: 'وظائف محفوظة',
     savedItemTabSavedServices: 'خدمات محفوظة',
     savedItemTabFollowedCompanies: 'الشركات المتابعة',
-    savedItemTabLikedFreelancers: 'عاملون حرّون معجبون',
+    savedItemTabLikedFreelancers: 'اعجاب المستقلين ',
     savedItemHeader: 'العنصر المحفوظ',
 
     //For ProfileSetting.js
-    profileSettingEditMyProfile: 'تعديل الملف الشخصي',
     profileSettingTabPersonalDetailSkill: 'تفاصيل الشخصية والمهارة',
     profileSettingTabExpEdu: 'الخبرة والتعليم',
     profileSettingTabSocialProfiles: 'الملفات الاجتماعية',
@@ -1632,8 +1603,8 @@ const strings = new LocalizedStrings({
     profileSettingSelectLanguages: 'اختر اللغات',
     profileSettingEnglishLevel: 'مستوى اللغة الإنجليزية',
     profileSettingSelectEnglishLevel: 'اختر مستوى اللغة الإنجليزية',
-    profileSettingTypeFreelancer: 'نوع العامل الحر الذي أنت',
-    profileSettingSelectTypeFreelancer: 'اختر نوع العامل الحر',
+    profileSettingTypeFreelancer: 'نوع المستقل   ',
+    profileSettingSelectTypeFreelancer: 'اختر نوع المستقل ',
     profileSettingCompanyDetails: 'تفاصيل الشركة',
     profileSettingYourDepartment: 'قسمك؟',
     profileSettingNoEmployees: 'عدد الموظفين لديك',
@@ -1695,10 +1666,10 @@ const strings = new LocalizedStrings({
     profileSettingPickDate: 'اختر التاريخ',
 
     //For PricePlan.js
-    pricePlanHeading: 'أفضل خطط الأسعار',
-    pricePlanDesc:
-      'دوتيم lorem tempor incune utnaem labore etdolore maigna aliqua.',
+    pricePlanHeading:'عنوان خطة السعر',
+    pricePlanDesc:  'وصف تفاصيل خطةالسعر.',
 
+     
     //For PayoutSettings.js
     payoutSettingsTabPayoutsSettings: 'إعدادات السحب',
     payoutSettingsTabYourPayouts: 'سحوباتك',
@@ -1862,26 +1833,26 @@ const strings = new LocalizedStrings({
 
     //For AddPortfolios.js
     addPortfoliosHeader: 'إضافة محفظة',
-    addPortfoliosPortfolioTitle: 'عنوان المحفظة',
-    addPortfoliosPortfolioTitlePlaceholder: 'أضف عنوان المحفظة',
+    addPortfoliosPortfolioTitle: 'عنوان البورتفوليو',
+    addPortfoliosPortfolioTitlePlaceholder: 'أضف عنوان البورتفوليو',
     addPortfoliosCustomLink: 'رابط مخصص (اختياري)',
     addPortfoliosCustomLinkPalceholder: 'أضف رابط مخصص',
-    addPortfoliosPortfolioCategories: 'فئات المحفظة',
-    addPortfoliosSelectPortfolioCategories: 'حدد فئات المحفظة',
-    addPortfoliosPortfolioTags: 'علامات المحفظة',
-    addPortfoliosSelectPortfolioTags: 'حدد علامات المحفظة',
+    addPortfoliosPortfolioCategories: 'فئات البورتفوليو',
+    addPortfoliosSelectPortfolioCategories: 'حدد فئات البورتفوليو',
+    addPortfoliosPortfolioTags: 'علامات البورتفوليو',
+    addPortfoliosSelectPortfolioTags: 'حدد علامات البورتفوليو',
     addPortfoliosAddYourVideos: 'أضف مقاطع الفيديو الخاصة بك',
     addPortfoliosVideoURL: 'رابط مقطع الفيديو',
-    addPortfoliosPortfolioDetail: 'تفاصيل المحفظة',
-    addPortfoliosPortfolioDetailPlaceholder: 'أضف تفاصيل المحفظة',
+    addPortfoliosPortfolioDetail: 'تفاصيل البورتفوليو',
+    addPortfoliosPortfolioDetailPlaceholder: 'أضف تفاصيل البورتفوليو',
     addPortfoliosUploadImages: 'تحميل الصور',
     addPortfoliosAllowedPhotos:
-      'يُسمح لك فقط بتحميل 10 صور لكل محفظة. إذا قمت بتحميل مزيد من الصور، سيتم إرفاق أول 10 صور بالمحفظة',
+   ' يُسمح لك فقط بتحميل 10 صور لكل بورتفوليو. إذا قمت بتحميل مزيد من الصور، سيتم إرفاق أول 10 صور بالبورتفوليو',
     addPortfoliosUploadDocuments: 'تحميل المستندات',
     addPortfoliosFileSize: 'حجم الملف: ',
 
     //For PortfolioDetail.js
-    portfolioDetailHeading: 'تفاصيل المحفظة',
+    portfolioDetailHeading: 'عنوان ',
     portfolioDetailComment: 'تعليق',
     portfolioDetailClickReply: 'انقر للرد',
     portfolioDetailLeaveYour: 'اترك',
@@ -1895,7 +1866,7 @@ const strings = new LocalizedStrings({
     //For PortfoliosLisiting.js
     portfoliosLisitingAreYouSure: 'هل أنت متأكد؟',
     portfoliosLisitingCannotBeUndone: 'لا يمكن التراجع عن هذا الإجراء',
-    portfoliosLisitingManagePortfolios: 'إدارة المحافظ',
+    portfoliosLisitingManagePortfolios: 'إدارة البورتفوليو',
     portfoliosLisitingPortfoliosListing: 'قائمة المحافظ',
     portfoliosLisitingPublish: 'نشر',
     portfoliosLisitingDraft: 'مسودة',
@@ -1922,12 +1893,12 @@ const strings = new LocalizedStrings({
     jobStatusCardViewDetail: 'عرض التفاصيل',
     jobStatusCardViewProposals: 'عرض العروض',
     jobStatusCardJobRepost: 'إعادة نشر الوظيفة',
-    jobStatusCardReopenJob: 'هل أنت متأكد أنك تريد إعادة فتح هذه الوظيفة؟',
+    jobStatusCardReopenJob: 'إعادة فتح هذه الوظيفة؟',
     jobStatusCardRepost: 'إعادة نشر',
-    jobStatusCardHired: 'مستأجر',
+    jobStatusCardHired: 'مستأجر ',
 
     //For ManageMilestone.js
-    manageMilestoneManageMilestone: 'إدارة المرحلة',
+    manageMilestoneManageMilestone: 'إدارة الدفعات',
     manageMilestoneHiredFreelancer: 'المستقل المستأجر',
     manageMilestoneEstimatedHours: 'الساعات المقدرة',
     manageMilestoneAmountPerHour: 'المبلغ لكل ساعة',
@@ -1942,16 +1913,16 @@ const strings = new LocalizedStrings({
     manageMilestoneProjectCompleted: 'اكتمال المشروع',
     manageMilestoneFeedback: 'تعليق',
     manageMilestoneUnderFreelancerReview: 'تحت مراجعة المستقل',
-    manageMilestoneSendMilestoneFreelancer: 'إرسال المرحلة إلى المستقل',
-    manageMilestoneAddNewmilestone: 'إضافة مرحلة جديدة',
+    manageMilestoneSendMilestoneFreelancer: 'إرسال الدفعة إلى المستقل',
+    manageMilestoneAddNewmilestone: 'إضافة دفعة جديدة',
     manageMilestoneAccept: 'قبول',
     manageMilestoneDecline: 'رفض',
     manageMilestoneProjectBudgetDetails: 'تفاصيل ميزانية المشروع',
     manageMilestoneTotalBudget: 'الميزانية الإجمالية',
     manageMilestoneInEscrow: 'في الضمان',
-    manageMilestoneMilestonePaid: 'المرحلة مدفوعة',
+    manageMilestoneMilestonePaid: 'دفعات مدفوعة',
     manageMilestoneRemainings: 'الباقي',
-    manageMilestoneMilestones: 'المراحل',
+    manageMilestoneMilestones: 'الدفعات',
     manageMilestoneBudget: 'الميزانية',
     manageMilestoneDueDate: 'تاريخ الاستحقاق:',
     manageMilestoneCompleteNow: 'اكتمال الآن',
@@ -1966,12 +1937,12 @@ const strings = new LocalizedStrings({
     manageMilestoneUploadRelevantProjectFiles: 'تحميل ملفات المشروع ذات الصلة',
     manageMilestoneFileSize: 'حجم الملف:',
     manageMilestoneSendNow: 'إرسال الآن',
-    manageMilestoneAddNewMilestone: 'إضافة مرحلة جديدة',
-    manageMilestoneMilestoneTitle: 'عنوان المرحلة',
-    manageMilestoneMilestoneTitlePlceholder: 'إضافة عنوان المرحلة',
+    manageMilestoneAddNewMilestone: 'إضافة دفعة جديدة',
+    manageMilestoneMilestoneTitle: 'عنوان الدفعة',
+    manageMilestoneMilestoneTitlePlceholder: 'إضافة عنوان الدفعة',
     manageMilestoneDueDateForm: 'تاريخ الاستحقاق',
     manageMilestonePrice: 'السعر',
-    manageMilestonePricePlaceholder: 'إضافة سعر المرحلة',
+    manageMilestonePricePlaceholder: 'إضافة سعر الدفعة',
     manageMilestonePickDate: 'اختيار التاريخ',
     manageMilestoneCancelReason: 'سبب الإلغاء',
     manageMilestoneReason: 'السبب',
@@ -1987,15 +1958,15 @@ const strings = new LocalizedStrings({
     manageMilestoneAmount: 'المبلغ',
     manageMilestoneSubtotal: 'المجموع الفرعي:',
     manageMilestoneTotal: 'المجموع:',
-    manageMilestoneInvoiceNote: 'هذا ليس إيصال ضريبي أو فاتورة',
+    manageMilestoneInvoiceNote: ' مذكرة الفاتورة',
     manageMilestoneCompleteProject: 'اكتمال المشروع',
     manageMilestoneAddFeedback: 'إضافة تعليقك',
     manageMilestoneSendFeedback: 'إرسال التعليق',
-    manageMilestoneStoragePermission: 'لم يتم منح إذن التخزين',
+    manageMilestoneStoragePermission: ' إذن التخزين',
 
     //For ManageProposals.js
     manageProposalsHeader: 'إدارة العروض',
-    manageProposalsHiredFreelnacer: 'المستقل المستأجر',
+    manageProposalsHiredFreelnacer: 'مستقل تم توظيفه',
     manageProposalsViewHistory: 'عرض التاريخ',
     manageProposalsReceivedProposals: 'العروض المستلمة',
 
@@ -2013,12 +1984,12 @@ const strings = new LocalizedStrings({
     postJobSelectProjectLevel: 'حدد مستوى المشروع',
     postJobDuration: 'المدة',
     postJobSelectJobDuration: 'حدد مدة الوظيفة',
-    postJobFreelancerType: 'نوع الفريلانسر',
-    postJobSelectFreelancerType: 'حدد نوع الفريلانسر',
+    postJobFreelancerType: 'نوع المستقل',
+    postJobSelectFreelancerType: 'حدد نوع المستقل',
     postJobEnglishLevel: 'مستوى اللغة الإنجليزية',
     postJobSelectEnglishLevel: 'حدد مستوى اللغة الإنجليزية',
-    postJobLocationType: 'نوع الموقع',
-    postJobProjectlocationType: 'نوع موقع المشروع',
+    postJobLocationType: ' الموقع',
+    postJobProjectlocationType: ' موقع المشروع',
     postJobExperience: 'الخبرة',
     postJobYearsExperiencePreferred: 'الخبرة المفضلة بالسنوات',
     postJobExpiredDate: 'تاريخ الانتهاء',
@@ -2043,7 +2014,7 @@ const strings = new LocalizedStrings({
     postJobSelectSkill: 'اختر المهارة',
     postJobUploadRelevantProjectFiles: 'تحميل الملفات ذات الصلة بالمشروع',
     postJobAttachments: 'المرفقات',
-    postJobShowAttachmentsJob: 'عرض "المرفقات" في صفحة تفاصيل الوظيفة',
+    postJobShowAttachmentsJob: 'عرض "مرفقات"الوظيفة',
     postJobFeaturedJob: 'وظيفة مميزة',
     postJobLocation: 'الموقع',
     postJobSelectLocation: 'حدد الموقع',
@@ -2056,40 +2027,40 @@ const strings = new LocalizedStrings({
     postJobQuestionPlacholder: 'السؤال هنا',
     postJobAnswer: 'الجواب',
     postJobAnswerPlaceholder: 'الجواب هنا',
-    postJobAddToList: 'إضافة إلى القائمة',
+    postJobAddToList:    '  اضف الى القائمة',
     postJobPickDate: 'اختر التاريخ',
 
     //For ProposalCard.js
     proposalCardChatNow: 'الدردشة الآن',
-    proposalCardHireCreateMilestone: 'توظيف وإنشاء مرحلة',
-    proposalCardHireNow: 'توظيف الآن',
+    proposalCardHireCreateMilestone: ' إنشاء دفعة',
+    proposalCardHireNow: 'وظف الآن',
 
     // For ViewHistory.js
-    viewHistoryStoragePermission: 'مطلوب إذن التخزين',
-    viewHistoryNeedsAccess:
-      'تحتاج التطبيق إلى الوصول إلى التخزين الخاص بك لتنزيل المستندات',
-    viewHistoryGranted: 'لم يتم منح إذن التخزين',
-    viewHistorySkill: 'مستوى المهارة:',
+    viewHistoryStoragePermission: ' إذن التخزين',
+    viewHistoryNeedsAccess: 'يحتاج الوصول',
+    
+    viewHistoryGranted: '  ممنوح  ',
+    viewHistorySkill: ' المهارة:',
     viewHistoryProjectType: 'نوع المشروع:',
     viewHistoryCountry: 'الدولة:',
     viewHistoryOfferedPrice: 'السعر المقترح :',
     viewHistoryAddonsServices: 'خدمات الإضافات',
-    viewHistoryHiredFreelancer: 'مستقل موظف',
+    viewHistoryHiredFreelancer: 'استأجر مستقل',
     viewHistoryFeedback: 'التقييم',
-    viewHistoryEstimatedHours: 'عدد الساعات المقدرة',
-    viewHistoryAmount: 'المبلغ لكل ساعة',
-    viewHistoryTitle: 'عرض التاريخ',
+    viewHistoryEstimatedHours: ' الساعات المقدرة',
+    viewHistoryAmount:  'المبلغ',
+    viewHistoryTitle: 'عنوان',
     viewHistoryDuration: 'المدة',
     viewHistoryAttachement: 'المرفق:',
     viewHistoryAttached: 'المرفق',
     viewHistoryCompleted: 'تم الاكتمال',
     viewHistoryCancelled: 'تم الإلغاء',
     viewHistoryUpdate: 'تحديث',
-    viewHistoryProject: 'تاريخ المشروع',
-    viewHistoryNoFound: 'لم يتم العثور على تاريخ',
+    viewHistoryProject: 'المشروع',
+    viewHistoryNoFound: 'لم يتم العثور',
     viewHistoryDescription: 'الوصف',
     viewHistoryDescriptionDetail: 'تفاصيل الوصف',
-    viewHistoryUploadFiles: 'تحميل ملفات المشروع ذات الصلة',
+    viewHistoryUploadFiles: 'تحميل ملفات المشروع',
     viewHistoryFileSize: 'حجم الملف:',
     viewHistoryKB: 'كيلوبايت',
     viewHistorySendNow: 'إرسال الآن',
@@ -2098,20 +2069,7 @@ const strings = new LocalizedStrings({
     viewHistorySendFeedback: 'إرسال التقييم',
     viewHistoryCancelReason: 'سبب الإلغاء',
     viewHistoryReason: 'السبب',
-    viewHistoryTypeReason: 'اكتب السبب هنا',
-
-    //For Language.js
-    languageLangauge: 'لغة',
-    languageChangeAppLanguage: 'تغيير لغة التطبيق الخاص بك',
-    languageSelectLanguage: 'اختار اللغة',
-    languageArabic: 'العربية',
-    languageEnglish: 'English',
-    languageRestartAlertHeading: 'أعد تشغيل التطبيق',
-    languageRestartAlertHeadingIOS: 'أعد تشغيل التطبيق يدويًا',
-    languageRestartAlertMessage:
-      'لقد قمت بتغيير لغة التطبيق. تحتاج إلى إعادة تشغيل التطبيق حتى يكون فعالاً.',
-    languageRestartAlertButton: 'اعد البدء الان',
-    languageRestartAlertButtonIOS: 'تمام',
+    viewHistoryTypeReason: 'اكتب السبب',
   },
 });
 export default strings;
