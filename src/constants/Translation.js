@@ -75,6 +75,7 @@ const strings = new LocalizedStrings({
     signUpText: 'Sign up now',
 
     // For Inbox.js & all SearchField
+    inboxInbox: 'Inbox',
     inboxSearch: 'Search by title',
 
     // For ListCard.js
@@ -89,8 +90,10 @@ const strings = new LocalizedStrings({
     headerJobs: 'Jobs',
     headerEmployers: 'Employers',
     headerServices: 'Services',
+    headerSearchNow: 'Search now',
 
     // For Dashboard.js
+    dashboardDashboard: 'Dashboard',
     dashboardMessage: 'New Messages',
     dashboardProposals: 'Latest Proposals',
     dashboardView: 'View all saved \n Items',
@@ -111,6 +114,7 @@ const strings = new LocalizedStrings({
     dashboardUpgrade: 'Upgrade Now',
 
     //For Dispute.js
+    disputeDisputes: 'Disputes',
     disputeCreate: 'Create disputes',
     disputeSubject: 'Subject:',
     disputeService: 'Project/Service:',
@@ -134,6 +138,7 @@ const strings = new LocalizedStrings({
     customDrawerDashboard: 'Dashboard',
     customDrawerInbox: 'Inbox',
     customDrawerProfile: 'View profile',
+    customDrawerSettings: 'Settings',
     customDrawerIdentity: ' Identity verification',
     customDrawerEdit: 'Edit my profile',
     customDrawerPayout: 'Payout settings',
@@ -164,6 +169,7 @@ const strings = new LocalizedStrings({
     customDrawerInvoices: 'Invoices',
     customDrawerDisputes: 'Disputes',
     customDrawerSignup: 'Signup',
+    customDrawerLanguage: 'Language',
     customDrawerHelp: 'Help & support',
     customDrawerPackages: 'Packages',
     customDrawerLogout: 'Logout',
@@ -308,6 +314,7 @@ const strings = new LocalizedStrings({
     identityVerificationReUpload: 'Cancel & Re-Upload',
 
     // For InvoiceList.js
+    invoiceInvoices: 'Invoices',
     invoiceListViewable: 'Invoice details are only viewable on web screens.',
     invoiceListOrder: 'Order ID:',
     invoiceListCreated: 'Created Date:',
@@ -527,6 +534,7 @@ const strings = new LocalizedStrings({
     savedItemHeader: 'Saved item',
 
     //For ProfileSetting.js
+    profileSettingEditMyProfile: 'Edit my profile',
     profileSettingTabPersonalDetailSkill: 'Personal details & skill',
     profileSettingTabExpEdu: 'Experience & education',
     profileSettingTabSocialProfiles: 'Social profiles',
@@ -1036,6 +1044,19 @@ const strings = new LocalizedStrings({
     viewHistoryCancelReason: 'Cancel reason',
     viewHistoryReason: 'Reason',
     viewHistoryTypeReason: 'Type reason here',
+
+    //For Language.js
+    languageLangauge: 'Language',
+    languageChangeAppLanguage: 'Change your App language',
+    languageSelectLanguage: 'Select language',
+    languageArabic: 'العربية',
+    languageEnglish: 'English',
+    languageRestartAlertHeading: 'Restart app',
+    languageRestartAlertHeadingIOS: 'Restart app manually',
+    languageRestartAlertMessage:
+      'You have changed the app language. You need to restart the app for it to be effective.',
+    languageRestartAlertButton: 'Restart now',
+    languageRestartAlertButtonIOS: 'Okay',
   },
   ar: {
     //global
@@ -1112,6 +1133,7 @@ const strings = new LocalizedStrings({
     signUpText: 'سجّل الانضمام الآن',
 
     // For Inbox.js & all SearchField
+    inboxInbox: 'صندوق الوارد',
     inboxSearch: 'البحث حسب العنوان',
 
     // For ListCard.js
@@ -1126,8 +1148,10 @@ const strings = new LocalizedStrings({
     headerJobs: 'وظائف',
     headerEmployers: 'أرباب العمل',
     headerServices: 'خدمات',
+    headerSearchNow: 'ابحث الآن',
 
     // For Dashboard.js
+    dashboardDashboard: 'لوحة التحكم',
     dashboardMessage: 'رسائل جديدة',
     dashboardProposals: 'أحدث العروض',
     dashboardView: 'عرض جميع العناصر المحفوظة \n هنا',
@@ -1148,6 +1172,7 @@ const strings = new LocalizedStrings({
     dashboardUpgrade: 'ترقية الباقة الآن',
 
     //For Dispute.js
+    disputeDisputes: 'النزاعات',
     disputeCreate: 'إنشاء نزاعات',
     disputeSubject: 'الموضوع:',
     disputeService: 'المشروع / الخدمة:',
@@ -1170,6 +1195,7 @@ const strings = new LocalizedStrings({
     customDrawerDashboard: 'لوحة التحكم',
     customDrawerInbox: 'صندوق الوارد',
     customDrawerProfile: 'عرض الملف الشخصي',
+    customDrawerSettings: 'الإعدادات',
     customDrawerIdentity: 'التحقق من الهوية',
     customDrawerEdit: 'تعديل الملف الشخصي',
     customDrawerPayout: 'إعدادات الدفع',
@@ -1200,6 +1226,7 @@ const strings = new LocalizedStrings({
     customDrawerInvoices: 'الفواتير',
     customDrawerDisputes: 'النزاعات',
     customDrawerSignup: 'التسجيل',
+    customDrawerLanguage: 'لغة',
     customDrawerHelp: 'المساعدة والدعم',
     customDrawerPackages: 'الباقات',
     customDrawerLogout: 'تسجيل الخروج',
@@ -1343,6 +1370,7 @@ const strings = new LocalizedStrings({
     identityVerificationReUpload: 'إلغاء وإعادة التحميل',
 
     // For InvoiceList.js
+    invoiceInvoices: 'الفواتير',
     invoiceListViewable: 'تفاصيل الفاتورة قابلة للعرض فقط على شاشات الويب.',
     invoiceListOrder: 'رقم الطلب:',
     invoiceListCreated: 'تاريخ الإنشاء:',
@@ -1562,6 +1590,7 @@ const strings = new LocalizedStrings({
     savedItemHeader: 'العنصر المحفوظ',
 
     //For ProfileSetting.js
+    profileSettingEditMyProfile: 'تعديل الملف الشخصي',
     profileSettingTabPersonalDetailSkill: 'تفاصيل الشخصية والمهارة',
     profileSettingTabExpEdu: 'الخبرة والتعليم',
     profileSettingTabSocialProfiles: 'الملفات الاجتماعية',
@@ -1666,10 +1695,9 @@ const strings = new LocalizedStrings({
     profileSettingPickDate: 'اختر التاريخ',
 
     //For PricePlan.js
-    pricePlanHeading:'عنوان خطة السعر',
-    pricePlanDesc:  'وصف تفاصيل خطةالسعر.',
+    pricePlanHeading: 'عنوان خطة السعر',
+    pricePlanDesc: 'وصف تفاصيل خطةالسعر.',
 
-     
     //For PayoutSettings.js
     payoutSettingsTabPayoutsSettings: 'إعدادات السحب',
     payoutSettingsTabYourPayouts: 'سحوباتك',
@@ -1847,7 +1875,7 @@ const strings = new LocalizedStrings({
     addPortfoliosPortfolioDetailPlaceholder: 'أضف تفاصيل البورتفوليو',
     addPortfoliosUploadImages: 'تحميل الصور',
     addPortfoliosAllowedPhotos:
-   ' يُسمح لك فقط بتحميل 10 صور لكل بورتفوليو. إذا قمت بتحميل مزيد من الصور، سيتم إرفاق أول 10 صور بالبورتفوليو',
+      ' يُسمح لك فقط بتحميل 10 صور لكل بورتفوليو. إذا قمت بتحميل مزيد من الصور، سيتم إرفاق أول 10 صور بالبورتفوليو',
     addPortfoliosUploadDocuments: 'تحميل المستندات',
     addPortfoliosFileSize: 'حجم الملف: ',
 
@@ -2027,7 +2055,7 @@ const strings = new LocalizedStrings({
     postJobQuestionPlacholder: 'السؤال هنا',
     postJobAnswer: 'الجواب',
     postJobAnswerPlaceholder: 'الجواب هنا',
-    postJobAddToList:    '  اضف الى القائمة',
+    postJobAddToList: '  اضف الى القائمة',
     postJobPickDate: 'اختر التاريخ',
 
     //For ProposalCard.js
@@ -2038,7 +2066,7 @@ const strings = new LocalizedStrings({
     // For ViewHistory.js
     viewHistoryStoragePermission: ' إذن التخزين',
     viewHistoryNeedsAccess: 'يحتاج الوصول',
-    
+
     viewHistoryGranted: '  ممنوح  ',
     viewHistorySkill: ' المهارة:',
     viewHistoryProjectType: 'نوع المشروع:',
@@ -2048,7 +2076,7 @@ const strings = new LocalizedStrings({
     viewHistoryHiredFreelancer: 'استأجر مستقل',
     viewHistoryFeedback: 'التقييم',
     viewHistoryEstimatedHours: ' الساعات المقدرة',
-    viewHistoryAmount:  'المبلغ',
+    viewHistoryAmount: 'المبلغ',
     viewHistoryTitle: 'عنوان',
     viewHistoryDuration: 'المدة',
     viewHistoryAttachement: 'المرفق:',
@@ -2070,6 +2098,19 @@ const strings = new LocalizedStrings({
     viewHistoryCancelReason: 'سبب الإلغاء',
     viewHistoryReason: 'السبب',
     viewHistoryTypeReason: 'اكتب السبب',
+
+    //For Language.js
+    languageLangauge: 'لغة',
+    languageChangeAppLanguage: 'تغيير لغة التطبيق الخاص بك',
+    languageSelectLanguage: 'اختار اللغة',
+    languageArabic: 'العربية',
+    languageEnglish: 'English',
+    languageRestartAlertHeading: 'أعد تشغيل التطبيق',
+    languageRestartAlertHeadingIOS: 'أعد تشغيل التطبيق يدويًا',
+    languageRestartAlertMessage:
+      'لقد قمت بتغيير لغة التطبيق. تحتاج إلى إعادة تشغيل التطبيق حتى يكون فعالاً.',
+    languageRestartAlertButton: 'اعد البدء الان',
+    languageRestartAlertButtonIOS: 'تمام',
   },
 });
 export default strings;
