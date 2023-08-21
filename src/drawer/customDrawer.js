@@ -8,8 +8,9 @@ import {
   ScrollView,
   Linking,
   Platform,
+  Switch,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from '../styles/Style';
 import FormButton from '../components/FormButton';
 import * as Constant from '../constants/globalConstant';
@@ -22,6 +23,7 @@ import {
   updateProjectTab,
   updateJobTab,
   updateServiceTab,
+  updateCurrentLanguage,
 } from '../redux/GlobalStateSlice';
 import {
   updateToken,
@@ -46,6 +48,7 @@ const customDrawer = ({navigation}) => {
   const profileInfo = useSelector(state => state.value.profileInfo);
   const isVerified = useSelector(state => state.value.verified);
 
+  const [update, setUpdate] = useState({});
   const [showAlert, setShowAlert] = useState(false);
   const [type, setType] = useState('');
   const [title, setTitle] = useState('');
@@ -328,16 +331,24 @@ const customDrawer = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{backgroundColor: Constant.whiteColor}}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('DashboardTab')}
+          style={[styles.drawerItemParentStyle, styles.drawerAddonStyle]}>
+          <Feather name={'home'} size={18} color={Constant.iconColor} />
+          <Text style={styles.drawerItemTextStyle}>
+            {Translation.customDrawerHome}
+          </Text>
+        </TouchableOpacity>
         {!isEmpty && (
           <>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={() => navigation.navigate('DashboardTab')}
               style={[styles.drawerItemParentStyle, styles.drawerAddonStyle]}>
               <Feather name={'home'} size={18} color={Constant.iconColor} />
               <Text style={styles.drawerItemTextStyle}>
                 {Translation.customDrawerHome}
               </Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TouchableOpacity
               onPress={() => navigation.navigate('Dashboard')}
               style={[styles.drawerItemParentStyle, styles.drawerAddonStyle]}>
@@ -486,7 +497,9 @@ const customDrawer = ({navigation}) => {
                     size={18}
                     color={Constant.iconColor}
                   />
-                  <Text style={styles.drawerItemTextStyle}>Settings</Text>
+                  <Text style={styles.drawerItemTextStyle}>
+                    {Translation.customDrawerSettings}
+                  </Text>
                 </View>
                 <Feather
                   name={openTab == 'setting' ? 'chevron-up' : 'chevron-down'}
@@ -1106,6 +1119,17 @@ const customDrawer = ({navigation}) => {
             )}
           </>
         )}
+
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Language')}
+          style={[styles.drawerItemParentStyle, styles.drawerAddonStyle]}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <Feather name={'globe'} size={18} color={Constant.iconColor} />
+            <Text style={styles.drawerItemTextStyle}>
+              {Translation.customDrawerLanguage}
+            </Text>
+          </View>
+        </TouchableOpacity>
 
         {settings.help_support.gadget == 'enable' && (
           <TouchableOpacity

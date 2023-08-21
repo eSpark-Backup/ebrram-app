@@ -1,0 +1,97 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Comfortaa-Bold.ttf",
+      "sha1": "030d538c445730fb1ec262b0e2bd748cdfceb272"
+    },
+    {
+      "path": "assets/fonts/Comfortaa-Light.ttf",
+      "sha1": "59ba6ecb3d687de56df4e0c793bf2871456cbed1"
+    },
+    {
+      "path": "assets/fonts/Comfortaa-Medium.ttf",
+      "sha1": "eda88ba64df47e9d918b3926f9d84653a5a82bd7"
+    },
+    {
+      "path": "assets/fonts/Comfortaa-Regular.ttf",
+      "sha1": "018c91b57e43873172a1767df40434cb56e130e4"
+    },
+    {
+      "path": "assets/fonts/Comfortaa-SemiBold.ttf",
+      "sha1": "8aa11f225d34b7d4e25aec3ca6b5cae30a444ce8"
+    },
+    {
+      "path": "assets/fonts/Lateef-Bold.ttf",
+      "sha1": "a62a0b59e6c398027674979838f5959375ed26b6"
+    },
+    {
+      "path": "assets/fonts/Lateef-Medium.ttf",
+      "sha1": "4836875b199ea0e8c5329b9eb2119f9a5997b865"
+    },
+    {
+      "path": "assets/fonts/Lateef-Regular.ttf",
+      "sha1": "9558fc8f055436c01aaacf94c57440c08e4436d3"
+    },
+    {
+      "path": "assets/fonts/Lateef-SemiBold.ttf",
+      "sha1": "eeda638f27c7a5a6123a6acd8ab2e2d82f45ad3d"
+    },
+    {
+      "path": "assets/fonts/NotoNaskhArabic-Bold.ttf",
+      "sha1": "24baf28754f6501978c71854397bf439cd4c59e4"
+    },
+    {
+      "path": "assets/fonts/NotoNaskhArabic-Medium.ttf",
+      "sha1": "6b2dcacd300f7256c11bf259a50a649dd34be479"
+    },
+    {
+      "path": "assets/fonts/NotoNaskhArabic-Regular.ttf",
+      "sha1": "544664df82bb64e7f1c2b2998d40c01c2a0a4bbd"
+    },
+    {
+      "path": "assets/fonts/NotoNaskhArabic-SemiBold.ttf",
+      "sha1": "4bc8727ea9c92236faeb4b3b5c910e811341f7c8"
+    },
+    {
+      "path": "assets/fonts/OpenSans-Bold.ttf",
+      "sha1": "b7f844e3fbc592719750956a7e9a19f0ede62c78"
+    },
+    {
+      "path": "assets/fonts/OpenSans-Medium.ttf",
+      "sha1": "71e723b6f61cd4034b2bd373f3f346a7d8680ec2"
+    },
+    {
+      "path": "assets/fonts/OpenSans-Regular.ttf",
+      "sha1": "b334209f43426374b709e42e3185dc46478a96ba"
+    },
+    {
+      "path": "assets/fonts/OpenSans-SemiBold.ttf",
+      "sha1": "45974cf9acbd1be118f2b426c7cfab33ee584e3c"
+    },
+    {
+      "path": "assets/fonts/Outfit-Bold.ttf",
+      "sha1": "1fb1bac5b7ca944183892094a02d1ae07387f26e"
+    },
+    {
+      "path": "assets/fonts/Outfit-Medium.ttf",
+      "sha1": "bb52976032066e4fc7aa02f7535cc17e6757e10d"
+    },
+    {
+      "path": "assets/fonts/Outfit-Regular.ttf",
+      "sha1": "ae5652d0bed8c90d97c43fe6bcaac0a9b0f787e7"
+    },
+    {
+      "path": "assets/fonts/Outfit-SemiBold.ttf",
+      "sha1": "dfaa61cf745e3a4aec141f96fd1cfc10dcd363c8"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-Bold.ttf",
+      "sha1": "af0644013d176117d03b4e5a764698ea747b0431"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-Regular.ttf",
+      "sha1": "6c03c5dbe0217a08b3b7bd9cc170de857be7ccb1"
+    }
+  ]
+}

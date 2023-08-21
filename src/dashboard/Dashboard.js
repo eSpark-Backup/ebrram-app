@@ -150,7 +150,7 @@ const Dashboard = ({navigation}) => {
         backColor={Constant.whiteColor}
         iconColor={Constant.iconColor}
         heading={true}
-        title={'Dashboard'}
+        title={Translation.dashboardDashboard}
       />
       <Notification
         show={showAlert}
@@ -411,20 +411,20 @@ const Dashboard = ({navigation}) => {
                 }}
                 source={require('../../assets/images/dashboard-5.png')}
               />
-              
+
               {!loader ? (
                 <Text
-                style={{
-                  fontSize: 14,
-                  lineHeight: 24,
-                  letterSpacing: 0.5,
-                  fontFamily: Constant.primaryFontSemiBold,
-                  color: Constant.fontColor,
-                }}>
-                {profileInfo.user_type == 'freelancer'
-                  ? DashboardData.completed_jobs
-                  : DashboardData.total_completed_jobs}
-              </Text>
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 24,
+                    letterSpacing: 0.5,
+                    fontFamily: Constant.primaryFontSemiBold,
+                    color: Constant.fontColor,
+                  }}>
+                  {profileInfo.user_type == 'freelancer'
+                    ? DashboardData.completed_jobs
+                    : DashboardData.total_completed_jobs}
+                </Text>
               ) : (
                 <SkeletonPlaceholder>
                   <View
@@ -483,20 +483,20 @@ const Dashboard = ({navigation}) => {
                 }}
                 source={require('../../assets/images/dashboard-6.png')}
               />
-             
+
               {!loader ? (
-                 <Text
-                 style={{
-                   fontSize: 14,
-                   lineHeight: 24,
-                   letterSpacing: 0.5,
-                   fontFamily: Constant.primaryFontSemiBold,
-                   color: Constant.fontColor,
-                 }}>
-                 {profileInfo.user_type == 'freelancer'
-                   ? DashboardData.total_cancelled_jobs
-                   : DashboardData.total_cancelled_jobs}
-               </Text>
+                <Text
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 24,
+                    letterSpacing: 0.5,
+                    fontFamily: Constant.primaryFontSemiBold,
+                    color: Constant.fontColor,
+                  }}>
+                  {profileInfo.user_type == 'freelancer'
+                    ? DashboardData.total_cancelled_jobs
+                    : DashboardData.total_cancelled_jobs}
+                </Text>
               ) : (
                 <SkeletonPlaceholder>
                   <View
@@ -552,20 +552,20 @@ const Dashboard = ({navigation}) => {
                 }}
                 source={require('../../assets/images/dashboard-7.png')}
               />
-              
+
               {!loader ? (
-                 <Text
-                 style={{
-                   fontSize: 14,
-                   lineHeight: 24,
-                   letterSpacing: 0.5,
-                   fontFamily: Constant.primaryFontSemiBold,
-                   color: Constant.fontColor,
-                 }}>
-                 {profileInfo.user_type == 'freelancer'
-                   ? DashboardData.total_sold_services
-                   : DashboardData.total_posted_jobs}
-               </Text>
+                <Text
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 24,
+                    letterSpacing: 0.5,
+                    fontFamily: Constant.primaryFontSemiBold,
+                    color: Constant.fontColor,
+                  }}>
+                  {profileInfo.user_type == 'freelancer'
+                    ? DashboardData.total_sold_services
+                    : DashboardData.total_posted_jobs}
+                </Text>
               ) : (
                 <SkeletonPlaceholder>
                   <View
@@ -619,20 +619,20 @@ const Dashboard = ({navigation}) => {
                 }}
                 source={require('../../assets/images/dashboard-8.png')}
               />
-              
+
               {!loader ? (
-                 <Text
-                 style={{
-                   fontSize: 14,
-                   lineHeight: 24,
-                   letterSpacing: 0.5,
-                   fontFamily: Constant.primaryFontSemiBold,
-                   color: Constant.fontColor,
-                 }}>
-                 {profileInfo.user_type == 'freelancer'
-                   ? DashboardData.ongoing_services
-                   : DashboardData.total_ongoing_services}
-               </Text>
+                <Text
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 24,
+                    letterSpacing: 0.5,
+                    fontFamily: Constant.primaryFontSemiBold,
+                    color: Constant.fontColor,
+                  }}>
+                  {profileInfo.user_type == 'freelancer'
+                    ? DashboardData.ongoing_services
+                    : DashboardData.total_ongoing_services}
+                </Text>
               ) : (
                 <SkeletonPlaceholder>
                   <View
@@ -690,20 +690,20 @@ const Dashboard = ({navigation}) => {
                 }}
                 source={require('../../assets/images/dashboard-9.png')}
               />
-              
+
               {!loader ? (
                 <Text
-                style={{
-                  fontSize: 14,
-                  lineHeight: 24,
-                  letterSpacing: 0.5,
-                  fontFamily: Constant.primaryFontSemiBold,
-                  color: Constant.fontColor,
-                }}>
-                {profileInfo.user_type == 'freelancer'
-                  ? DashboardData.total_completed_services
-                  : DashboardData.total_completed_services}
-              </Text>
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 24,
+                    letterSpacing: 0.5,
+                    fontFamily: Constant.primaryFontSemiBold,
+                    color: Constant.fontColor,
+                  }}>
+                  {profileInfo.user_type == 'freelancer'
+                    ? DashboardData.total_completed_services
+                    : DashboardData.total_completed_services}
+                </Text>
               ) : (
                 <SkeletonPlaceholder>
                   <View
@@ -755,20 +755,20 @@ const Dashboard = ({navigation}) => {
                 }}
                 source={require('../../assets/images/dashboard-10.png')}
               />
-              
+
               {!loader ? (
                 <Text
-                style={{
-                  fontSize: 14,
-                  lineHeight: 24,
-                  letterSpacing: 0.5,
-                  fontFamily: Constant.primaryFontSemiBold,
-                  color: Constant.fontColor,
-                }}>
-                {profileInfo.user_type == 'freelancer'
-                  ? DashboardData.total_cancelled_services
-                  : DashboardData.total_cancelled_services}
-              </Text>
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 24,
+                    letterSpacing: 0.5,
+                    fontFamily: Constant.primaryFontSemiBold,
+                    color: Constant.fontColor,
+                  }}>
+                  {profileInfo.user_type == 'freelancer'
+                    ? DashboardData.total_cancelled_services
+                    : DashboardData.total_cancelled_services}
+                </Text>
               ) : (
                 <SkeletonPlaceholder>
                   <View

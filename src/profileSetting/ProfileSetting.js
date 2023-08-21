@@ -1186,14 +1186,13 @@ const ProfileSetting = () => {
         projectsArray.push({
           title: projects[i].title,
           link: projects[i].link,
-         
         });
         imagesProject.push({
           name: projects[i].image.name,
           type: projects[i].image.type,
           uri: projects[i].image.uri,
-          index:i
-        })
+          index: i,
+        });
       } else {
         projectsArray.push({
           title: projects[i].title,
@@ -1232,7 +1231,7 @@ const ProfileSetting = () => {
     })
       .then(response => response.json())
       .then(async response => {
-        console.log("objectResponse",response)
+        console.log('objectResponse', response);
         if (response.type == 'success') {
           setSpecializationForm(false);
           setShowAlert(true);
@@ -1455,7 +1454,7 @@ const ProfileSetting = () => {
   const saveUpdateAward = async () => {
     let awardsArray = [];
     let imagesAwards = [];
-    console.log("object",awards)
+    console.log('object', awards);
     for (var i = 0; i < awards.length; i++) {
       if (awards[i].hasOwnProperty('image')) {
         awardsArray.push({
@@ -1466,8 +1465,8 @@ const ProfileSetting = () => {
           name: awards[i].image.name,
           type: awards[i].image.type,
           uri: awards[i].image.uri,
-          index:i
-        })
+          index: i,
+        });
       } else {
         awardsArray.push({
           title: awards[i].title,
@@ -1494,16 +1493,16 @@ const ProfileSetting = () => {
       });
     }
     console.log('formData', formData);
-      fetch(Constant.BaseUrl + 'profile/update_tab_settings', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'multipart/form-data',
-          Authorization: 'Bearer ' + token.authToken,
-        },
-        body: formData,
-      })
-        .then(response => response.json())
+    fetch(Constant.BaseUrl + 'profile/update_tab_settings', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'multipart/form-data',
+        Authorization: 'Bearer ' + token.authToken,
+      },
+      body: formData,
+    })
+      .then(response => response.json())
       .then(async response => {
         if (response.type == 'success') {
           setAwardForm(false);
@@ -1939,7 +1938,7 @@ const ProfileSetting = () => {
         backColor={Constant.whiteColor}
         iconColor={Constant.iconColor}
         heading={true}
-        title={'Edit my profile'}
+        title={Translation.profileSettingEditMyProfile}
       />
       <Notification
         show={showAlert}
@@ -4057,7 +4056,6 @@ const ProfileSetting = () => {
                                   uri: item.image.uri,
                                 }
                               : require('../../assets/images/fileType.png')
-                              
                             : {uri: item.img_url}
                         }
                       />

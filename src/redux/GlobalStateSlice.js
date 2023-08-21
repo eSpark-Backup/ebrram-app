@@ -6,8 +6,8 @@ export const GlobalStateSlice = createSlice({
     projectTab: 0,
     jobTab: 0,
     serviceTab: 0,
-    serviceItem:{},
-    qouteItem:{},
+    serviceItem: {},
+    qouteItem: {},
     languageTaxonomy: [],
     locationTaxonomy: [],
     categoryTaxonomy: [],
@@ -19,18 +19,18 @@ export const GlobalStateSlice = createSlice({
     portfolioTagsTaxonomy: [],
     englishLevelTaxonomy: [],
     deliveryTaxonomy: [],
-    responseTimeTaxonomy : [],
-    freelancerTypeTaxonomy : [],
+    responseTimeTaxonomy: [],
+    freelancerTypeTaxonomy: [],
     projectLevelTaxonomy: [],
     LocationTypeTaxonomy: [],
-    industrialExperienceTaxonomy : [],
-    industrialExpCategoriesTaxonomy:[],
-    specializationTaxonomy : [],
+    industrialExperienceTaxonomy: [],
+    industrialExpCategoriesTaxonomy: [],
+    specializationTaxonomy: [],
     departmentsTaxonomy: [],
-    NoEmployeeTaxonomy :[],
-    hourlyRateTaxonomy:[],
-    projectExperienceTaxonomy:[],
-    reasonTypeTaxonomy:[]
+    NoEmployeeTaxonomy: [],
+    hourlyRateTaxonomy: [],
+    projectExperienceTaxonomy: [],
+    reasonTypeTaxonomy: [],
   },
   reducers: {
     updateSearchView: (state, action) => {
@@ -91,10 +91,10 @@ export const GlobalStateSlice = createSlice({
       state.serviceCategoryTaxonomy = action.payload;
     },
     updateProjectLevelTaxonomy: (state, action) => {
-      state.projectLevelTaxonomy = action.payload
+      state.projectLevelTaxonomy = action.payload;
     },
-    updateLocationTypeTaxonomy: (state, action)=>  {
-      state.LocationTypeTaxonomy = action.payload
+    updateLocationTypeTaxonomy: (state, action) => {
+      state.LocationTypeTaxonomy = action.payload;
     },
     updateIndustrialExperienceTaxonomy: (state, action) => {
       state.industrialExperienceTaxonomy = action.payload;
@@ -151,6 +151,6 @@ export const {
   updateNoEmployesTaxonomy,
   updateHourlyRateTaxonomy,
   updateProjectExperience,
-  updateReasonTypeTaxonomy
+  updateReasonTypeTaxonomy,
 } = GlobalStateSlice.actions;
 export default GlobalStateSlice.reducer;

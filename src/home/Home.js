@@ -7,6 +7,7 @@ import {
   FlatList,
   TouchableOpacity,
   TextInput,
+  ActivityIndicator,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 
@@ -66,6 +67,7 @@ const Home = ({navigation}) => {
   const settings = useSelector(state => state.setting.settings);
   const dispatch = useDispatch();
 
+  const [update, setUpdate] = useState({});
   const [loader, setLoader] = useState(false);
   const [jobCategories, setJobCategories] = useState([]);
   const [serviceCategories, setServicesCategories] = useState([]);
@@ -82,6 +84,12 @@ const Home = ({navigation}) => {
   const [blogSpinner, setBlogSpinner] = useState(true);
   const [freelancersSpinner, setFreelancersSpinner] = useState(true);
   const [blogList, setBlogList] = useState([]);
+
+  useEffect(() => {
+    // setTimeout(() => {
+    //   setShowSplash(false);
+    // }, 2000);
+  }, []);
 
   useEffect(() => {
     if (isFocused) {
@@ -108,12 +116,12 @@ const Home = ({navigation}) => {
       getNoEmployesTaxonomy();
       getPortfolioTags();
       getIndustrialExperienceTaxonomy();
-      getIndustrialExpCayegoriesTaxonomy()
+      getIndustrialExpCayegoriesTaxonomy();
       getSpecializationTaxonomy();
       getHourlyRateTaxonomy();
       getProjectExperience();
       getReasonTaxonomy();
-      getBlogs()
+      getBlogs();
       if (token != null) {
         getIdentityVerification();
       }
@@ -408,7 +416,8 @@ const Home = ({navigation}) => {
   };
   const getIndustrialExpCayegoriesTaxonomy = async () => {
     return fetch(
-      Constant.BaseUrl + 'taxonomies/get_taxonomy?taxonomy=wt-industrial-experience',
+      Constant.BaseUrl +
+        'taxonomies/get_taxonomy?taxonomy=wt-industrial-experience',
       {
         method: 'GET',
         headers: {
@@ -573,7 +582,7 @@ const Home = ({navigation}) => {
     )
       .then(response => response.json())
       .then(responseJson => {
-        setServiceSpinner(false)
+        setServiceSpinner(false);
         setServices(responseJson.services);
       })
       .catch(error => {
@@ -660,7 +669,7 @@ const Home = ({navigation}) => {
       })
       .catch(error => {
         setLoader(false);
-        console.error("HourlyRate",error);
+        console.error('HourlyRate', error);
       });
   };
   const getProjectExperience = async () => {
@@ -680,7 +689,7 @@ const Home = ({navigation}) => {
       })
       .catch(error => {
         setLoader(false);
-        console.error("Experience",error);
+        console.error('Experience', error);
       });
   };
   const getIdentityVerification = () => {
@@ -708,7 +717,6 @@ const Home = ({navigation}) => {
       });
   };
   const getBlogs = async () => {
-   
     return fetch(
       Constant.BaseUrl +
         'blog/blog_post_listings?user_id=' +
@@ -725,11 +733,11 @@ const Home = ({navigation}) => {
       .then(response => response.json())
       .then(responseJson => {
         setBlogList(responseJson.posts);
-        setBlogSpinner(false)
+        setBlogSpinner(false);
       })
       .catch(error => {
         setLoader(false);
-        setBlogSpinner(false)
+        setBlogSpinner(false);
         console.error(error);
       });
   };
@@ -745,7 +753,7 @@ const Home = ({navigation}) => {
             onPress={() => navigation.navigate('FreelancersList')}
             style={styles.homeFreelancerParentStyle}>
             <View style={styles.homeFreelancerHeadingParentStyle}>
-              <View>
+              <View style={{alignItems: 'flex-start'}}>
                 <Text style={styles.homeFreelancerHeadingTextStyle}>
                   {Translation.homeFreelancers}
                 </Text>
@@ -932,115 +940,119 @@ const Home = ({navigation}) => {
             />
           </View>
         )}
-       {freelancersSpinner && (
-            <View style={styles.homeServiceProviderCardParentStyle}>
-              <View style={{flexDirection: 'row'}}>
-              <ServiceProviderSkeleton width={300} />
-                <ServiceProviderSkeleton width={300} />
-                </View>
-                <FormButton
-            onPress={() => navigation.navigate('FreelancersList')}
-            buttonTitle={Translation.homeAllFreelancers}
-            backgroundColor={Constant.grayColor}
-            textColor={'#676767'}
-          />
-               </View>
-            )}
-        {freelancers.length != 0 &&
+        {freelancersSpinner && (
           <View style={styles.homeServiceProviderCardParentStyle}>
-          <Text style={styles.homeHeadingStyle}>
-            {Translation.homeFeaturedService}
-          </Text>
-          <View style={{flexDirection: 'row'}}>
-            {!freelancersSpinner && (
-              <FlatList
-                showsHorizontalScrollIndicator={false}
-                horizontal
-                showsVerticalScrollIndicator={false}
-                data={freelancers}
-                keyExtractor={(x, i) => i.toString()}
-                renderItem={({item, index}) => (
-                  <TouchableOpacity
-                    onPress={() =>
-                      navigation.navigate('FreelancerDetail', {item: item})
-                    }>
-                    <ServiceProviderCard width={300} item={item} />
-                  </TouchableOpacity>
-                )}
-              />
-            )}
+            <View style={{flexDirection: 'row'}}>
+              <ServiceProviderSkeleton width={300} />
+              <ServiceProviderSkeleton width={300} />
+            </View>
+            <FormButton
+              onPress={() => navigation.navigate('FreelancersList')}
+              buttonTitle={Translation.homeAllFreelancers}
+              backgroundColor={Constant.grayColor}
+              textColor={'#676767'}
+            />
           </View>
+        )}
+        {freelancers.length != 0 && (
+          <View style={styles.homeServiceProviderCardParentStyle}>
+            <Text style={styles.homeHeadingStyle}>
+              {Translation.homeFeaturedService}
+            </Text>
+            <View style={{flexDirection: 'row'}}>
+              {!freelancersSpinner && (
+                <FlatList
+                  showsHorizontalScrollIndicator={false}
+                  horizontal
+                  showsVerticalScrollIndicator={false}
+                  data={freelancers}
+                  keyExtractor={(x, i) => i.toString()}
+                  renderItem={({item, index}) => (
+                    <TouchableOpacity
+                      onPress={() =>
+                        navigation.navigate('FreelancerDetail', {item: item})
+                      }>
+                      <ServiceProviderCard width={300} item={item} />
+                    </TouchableOpacity>
+                  )}
+                />
+              )}
+            </View>
 
-          <FormButton
-            onPress={() => navigation.navigate('FreelancersList')}
-            buttonTitle={Translation.homeAllFreelancers}
-            backgroundColor={Constant.grayColor}
-            textColor={'#676767'}
-          />
-        </View>}
+            <FormButton
+              onPress={() => navigation.navigate('FreelancersList')}
+              buttonTitle={Translation.homeAllFreelancers}
+              backgroundColor={Constant.grayColor}
+              textColor={'#676767'}
+            />
+          </View>
+        )}
 
         {settings.user_meta.access_type.service_access == 'yes' && (
           <>
-          {serviceSpinner && (
-            <View style={styles.homeServicesCardParentStyle}>
-              <View style={{flexDirection: 'row'}}>
-                <ServiceListSkeleton width={300} />
-                <ServiceListSkeleton width={300} />
-                <ServiceListSkeleton width={300} />
+            {serviceSpinner && (
+              <View style={styles.homeServicesCardParentStyle}>
+                <View style={{flexDirection: 'row'}}>
+                  <ServiceListSkeleton width={300} />
+                  <ServiceListSkeleton width={300} />
+                  <ServiceListSkeleton width={300} />
                 </View>
-                 <FormButton
-                 onPress={() =>
-                   navigation.navigate('ServicesList', {searchWithNav: false})
-                 }
-                 buttonTitle={Translation.homeAllServices}
-                 backgroundColor={Constant.grayColor}
-                 textColor={'#676767'}
-               />
-               </View>
+                <FormButton
+                  onPress={() =>
+                    navigation.navigate('ServicesList', {searchWithNav: false})
+                  }
+                  buttonTitle={Translation.homeAllServices}
+                  backgroundColor={Constant.grayColor}
+                  textColor={'#676767'}
+                />
+              </View>
             )}
-          {services.length != 0 &&
-          <View style={styles.homeServicesCardParentStyle}>
-          <Text style={styles.homeHeadingStyle}>{Translation.homeFeaturedText}</Text>
-          <View style={{flexDirection: 'row'}}>
-          {!serviceSpinner && (
-              <FlatList
-                showsHorizontalScrollIndicator={false}
-                horizontal
-                showsVerticalScrollIndicator={false}
-                data={services}
-                keyExtractor={(x, i) => i.toString()}
-                renderItem={({item, index}) => (
-                  <TouchableOpacity
-                    onPress={() =>
-                      navigation.navigate('ServiceDetail', {
-                        item: item,
-                        edit: false,
-                      })
-                    }>
-                    <ServicesListCard width={300} item={item} />
-                  </TouchableOpacity>
-                )}
-              />
+            {services.length != 0 && (
+              <View style={styles.homeServicesCardParentStyle}>
+                <Text style={styles.homeHeadingStyle}>
+                  {Translation.homeFeaturedText}
+                </Text>
+                <View style={{flexDirection: 'row'}}>
+                  {!serviceSpinner && (
+                    <FlatList
+                      showsHorizontalScrollIndicator={false}
+                      horizontal
+                      showsVerticalScrollIndicator={false}
+                      data={services}
+                      keyExtractor={(x, i) => i.toString()}
+                      renderItem={({item, index}) => (
+                        <TouchableOpacity
+                          onPress={() =>
+                            navigation.navigate('ServiceDetail', {
+                              item: item,
+                              edit: false,
+                            })
+                          }>
+                          <ServicesListCard width={300} item={item} />
+                        </TouchableOpacity>
+                      )}
+                    />
+                  )}
+                </View>
+
+                <FormButton
+                  onPress={() =>
+                    navigation.navigate('ServicesList', {searchWithNav: false})
+                  }
+                  buttonTitle={Translation.homeAllServices}
+                  backgroundColor={Constant.grayColor}
+                  textColor={'#676767'}
+                />
+              </View>
             )}
-          </View>
-
-          <FormButton
-            onPress={() =>
-              navigation.navigate('ServicesList', {searchWithNav: false})
-            }
-            buttonTitle={Translation.homeAllServices}
-            backgroundColor={Constant.grayColor}
-            textColor={'#676767'}
-          />
-        </View>
-
-          }
           </>
         )}
 
         {settings.user_meta.access_type.job_access == 'yes' && (
           <View style={styles.homeJobbyCountryCardParentStyle}>
-            <Text style={styles.homeHeadingStyle}>{Translation.homeJobsCountry}</Text>
+            <Text style={styles.homeHeadingStyle}>
+              {Translation.homeJobsCountry}
+            </Text>
             <View style={{flexDirection: 'row'}}>
               {countryJobsSpinner ? (
                 <>
@@ -1076,12 +1088,12 @@ const Home = ({navigation}) => {
             </View>
 
             <FormButton
-            onPress={() =>
-              navigation.navigate('JobListing', {
-                backDisable: false,
-                searchWithNav: false,
-              })
-            }
+              onPress={() =>
+                navigation.navigate('JobListing', {
+                  backDisable: false,
+                  searchWithNav: false,
+                })
+              }
               buttonTitle={Translation.homeExploreJobs}
               backgroundColor={Constant.grayColor}
               textColor={'#676767'}

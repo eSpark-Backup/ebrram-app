@@ -172,7 +172,7 @@ const Login = ({navigation}) => {
                   <FormInput
                     labelValue={email}
                     onChangeText={userEmail => setEmail(userEmail)}
-                    placeholderText={'Enter email address'}
+                    placeholderText={Translation.globalEmailAdress}
                     keyboardType="email-address"
                     autoCorrect={false}
                   />

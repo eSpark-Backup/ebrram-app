@@ -98,15 +98,15 @@ const Dispute = () => {
       .then(responseJson => {
         setLoader(false);
         if (responseJson.type == 'success') {
-          let data = []
+          let data = [];
           for (var i = 0; i < responseJson.list.length; i++) {
             data.push({
               label: responseJson.list[i].post_title,
               value: responseJson.list[i].item_id,
             });
           }
-          setProjectItems(data)
-          setRefresh(!refresh)
+          setProjectItems(data);
+          setRefresh(!refresh);
         }
       })
       .catch(error => {
@@ -198,7 +198,7 @@ const Dispute = () => {
         backColor={Constant.whiteColor}
         iconColor={Constant.iconColor}
         heading={true}
-        title={'Dispute'}
+        title={Translation.disputeDisputes}
       />
       <Notification
         show={showAlert}
@@ -319,7 +319,7 @@ const Dispute = () => {
         <View style={styles.RBSheetMainView}>
           <View style={styles.RBSheetHeaderView}>
             <Text style={styles.freelancerDetailCardNameTextStyle}>
-             {Translation.disputeCreate}
+              {Translation.disputeCreate}
             </Text>
             <TouchableOpacity
               onPress={() => RBSheetCreateDispute.current.close()}
@@ -331,10 +331,12 @@ const Dispute = () => {
             <View style={styles.manageServicesRBSMainView}>
               <Text
                 style={[styles.manageServicesRBSSubHeading, {marginLeft: 5}]}>
-               {Translation.disputeCancelled}
+                {Translation.disputeCancelled}
               </Text>
             </View>
-            <Text style={styles.inputHeading}>{Translation.disputeService}</Text>
+            <Text style={styles.inputHeading}>
+              {Translation.disputeService}
+            </Text>
             <DropDownPicker
               style={styles.MultiselectmainView}
               textStyle={{
@@ -410,7 +412,9 @@ const Dispute = () => {
               disableBorderRadius={true}
               badgeDotColors={['#e76f51']}
             />
-            <Text style={styles.inputHeading}>{Translation.disputeDescription}</Text>
+            <Text style={styles.inputHeading}>
+              {Translation.disputeDescription}
+            </Text>
             <View style={styles.multilineTextInputView}>
               <TextInput
                 placeholder={Translation.disputeDescription}
