@@ -54,7 +54,7 @@
     "react-native-star-rating": "^1.1.0",
     "react-native-svg": "^15.15.5",
     "react-native-vector-icons": "^9.1.0",
-    "react-native-webview": "^11.23.0",
+    "react-native-webview": "^13.16.1",
     "react-redux": "^9.3.0",
     "redux-persist": "^6.0.0",
     "rn-fetch-blob": "^0.12.0",
