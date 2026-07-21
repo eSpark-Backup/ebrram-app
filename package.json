@@ -19,7 +19,7 @@
     "@react-native-firebase/messaging": "^18.0.0",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/drawer": "6.4.1",
-    "@react-navigation/native": "^6.0.10",
+    "@react-navigation/native": "^7.3.13",
     "@react-navigation/native-stack": "^6.6.2",
     "@reduxjs/toolkit": "^1.8.2",
     "axios": "^0.27.2",
